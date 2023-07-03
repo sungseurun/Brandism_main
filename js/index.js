@@ -96,7 +96,7 @@ function sectionEvent(){
     section13Event();
   } 
   if (wheelNumber >= 17 && wheelNumber < 18) {  // 휠횟수 15에서 18일 때 발생하는데
-    console.log("beforeWheelNumber:"+beforeWheelNumber);
+    console.log("beforeWheelNumber:" + beforeWheelNumber);
     section13Event();
     if(beforeWheelNumber==16){
       section14Event();
@@ -199,7 +199,6 @@ function section1Event(){
   let array = [1, 0.8, 0.6, 0.4, 0.22];  // 비율 값
   let arrayPixel = [0, -150, -350, -701, -1450];  // 픽셀값 높이(height
 
-  
   let beforeScale=0;
   let afterScale=0;
   let beforeTranslate=0;
@@ -282,6 +281,20 @@ function section2Event(){
 
 function section3Event(){
 
+  const element1 = document.querySelector('#section3');
+  element1.animate (
+    [
+      {opacity: 0.1},
+      {opacity: 0.4 },
+      {opacity: 1}
+    ],
+    {
+      duration: 2000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
   const element = document.getElementById('sec3_img');
   element.animate (
     {
@@ -302,13 +315,48 @@ function section3Event(){
 
 }
 function section4Event(){
+
+  const element1 = document.querySelector('.sec4_text1');
+  element1.animate (
+    [
+      {opacity: 0, transform: 'translateX(32rem)'},
+      // {opacity: 0 },
+      {opacity: 0 },
+      {opacity: 0.1 },
+      {opacity: 0.3 },
+      {opacity: 1, transform:'none'}
+    ],
+    {
+      duration: 2500,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
+  const element2 = document.querySelector('.sec4_text2');
+  element2.animate (
+    [
+      {opacity: 0, transform: 'translateX(-500px)'},
+      // {opacity: 0 },
+      {opacity: 0 },
+      {opacity: 0.1 },
+      {opacity: 0.3 },
+      {opacity: 1, transform:'none'}
+    ],
+    {
+      duration: 2500,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
   //console.log(sectionNum, '섹션4');
 }
 
 function section5Event(){ 
 
-  const element = document.querySelector('#sec5_img1');
-  element.animate (
+  const element1 = document.getElementById('sec5_img1');
+  element1.animate (
     {
       transform: [
         'translateY(0)',
@@ -325,8 +373,8 @@ function section5Event(){
     }
   );
 
-  const elementE = document.querySelector('#sec5_img2');
-  elementE.animate (
+  const element2 = document.getElementById('sec5_img2');
+  element2.animate (
     {
       transform: [
         'translateY(-30px)',
@@ -342,13 +390,60 @@ function section5Event(){
       easing: 'ease-in-out',     // 가속도timing-function (서서히시작 서서히종료)
     }
   );
+
+  const elementO = document.getElementById('sec5_text1');
+  elementO.animate (
+    [
+      {opacity: 0 },
+      {opacity: 0.1 },
+      {opacity: 0.3 },
+      {opacity: 1, transform: 'none'}
+    ],
+    {
+      duration: 3000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
+  const elementP = document.getElementById('sec5_text2');
+  elementP.animate (
+    [
+      {opacity: 0 },
+      {opacity: 0 },
+      {opacity: 0.2 },
+      {opacity: 0.4 },
+      {opacity: 1, transform: 'none'}
+    ],
+    {
+      duration: 4500,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
   console.log(sectionNum, '섹션5');
 }
 
 function section6Event(){
 
-  const element = document.getElementById('sec6_img');
+  const element = document.querySelector('#section6');
   element.animate (
+    [
+      {opacity: 0.},
+      {opacity: 0.1},
+      {opacity: 0.4 },
+      {opacity: 1}
+    ],
+    {
+      duration: 2000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
+  const elementY = document.getElementById('sec6_img');
+  elementY.animate (
     {
       transform: [
         'translateY(0)',
@@ -370,14 +465,27 @@ function section6Event(){
 }
 
 function section7Event(){
+  const element = document.querySelector('#section7');
+  element.animate (
+    [
+      {opacity: 0 },
+      {opacity: 0.1},
+      {opacity: 0.4 },
+      {opacity: 1}
+    ],
+    {
+      duration: 2000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
   //console.log(sectionNum, '섹션7');
 }
 
 function section8Event(){  
 
-  const element = document.getElementById('twinkle');
-
-  element.animate (
+  const elementR = document.getElementById('twinkle');
+  elementR.animate (
     {
       transform: [
         'rotate(0deg)', 'rotate(3deg)', 'rotate(0deg)', 'rotate(-4deg)', 'rotate(0deg)'
@@ -390,46 +498,92 @@ function section8Event(){
     }
   );
 
+  const elementO = document.getElementById('sec8_contact');
+  elementO.animate (
+    [
+      {opacity: 0, transform: 'translateX(200px)'},
+      {opacity: 0.1 },
+      {opacity: 1, transform:'none'}
+    ],
+    {
+      duration: 2000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
+  const elementP = document.getElementById('sec8_object');
+  elementP.animate (
+    [
+      {opacity: 0, transform: 'translateX(-60px)'},
+      {opacity: 0 },
+      // {opacity: 0 },
+      {opacity: 0.3 },
+      {opacity: 1, transform:'none'}
+    ],
+    {
+      duration: 3500,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
   console.log(sectionNum, "섹션8");
 }
 
 function section9Event(){
 
-  const element = document.getElementById('sec9_img');
-
-  /////////////////////////////////////////
-  // const elementb = document.getElementById('section9');
-
-  // elementb.animate (
+  // const element = document.querySelector('#section9');
+  // element.animate (
+  //   [
+  //     {opacity: 0 },
+  //     {opacity: 0.1},
+  //     {opacity: 0.4 },
+  //     {opacity: 1}
+  //   ],
   //   {
-  //     transform: [
-  //       'rotate(0deg)', 
-  //       'rotate(360deg)', 
-  //       // 'rotate(360deg)',
-  //     ]
-  //   },
-  //   {
-  //     duration: 1000,            // 밀리초 지정
-  //     direction: 'alternate',   // 반복 작업 방식
-  //     easing: 'ease-in',     // 가속도timing-function (서서히시작 서서히종료)
+  //     duration: 2000,       // 밀리초지정
+  //     easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+  //     fill: 'forwards'    // 종료후 (유지)
   //   }
   // );
 
-///////////////////////////////////////////
-  element.animate (
+////////////////////////////////////////////
+
+  const elementb = document.getElementById('section9');
+
+  elementb.animate (
     {
       transform: [
-        'rotate(0deg)', 
-        'rotate(360deg)', 
-        // 'rotate(360deg)',
+        'translateY(1080px,)', 
+        'translateY(100px,)',
+        'translateY(0)'
       ]
     },
     {
-      duration: 1000,            // 밀리초 지정
+      duration: 3000,            // 밀리초 지정
       direction: 'alternate',   // 반복 작업 방식
       easing: 'ease-in',     // 가속도timing-function (서서히시작 서서히종료)
     }
   );
+
+///////////////////////////////////////////
+
+const elementT = document.getElementById('sec9_img');
+elementT.animate (
+  {
+    transform: [
+      'translate(-150px, -90px)', 
+      'translate(-100px, -70px)',
+      'translate(-40px, -30px)',
+      'translate(0)'
+    ]
+  },
+  {
+    duration: 1000,    // 밀리초 지정
+    easing: 'ease'    // 가속도 종료
+  }
+);
 }
 
 function section10Event(){
@@ -439,9 +593,10 @@ function section10Event(){
   element.animate (
     {
       transform: [
-        'rotate(0deg)', 
-        'rotate(360deg)', 
-        'rotate(360deg)',
+        'translate(150px, 90px)', 
+        'translate(100px, 70px)',
+        'translate(40px, 30px)',
+        'translate(0)' 
       ]
     },
     {
