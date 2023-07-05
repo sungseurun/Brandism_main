@@ -106,7 +106,7 @@
   text-align: center;
   color: #000;
   line-height: 360px;
-  animation: slide1 3s ease-in-out;
+  animation: slide1 2s ease-in-out forwards;
 }
 #wrap #main .section1 .sec1_container .sec1_content .slide_text1 .we {
   position: absolute;
@@ -161,7 +161,7 @@
   font-weight: 200;
   font-size: 250px;
   line-height: 100%;
-  animation: slide2 3s ease-in-out;
+  animation: slide2 2.3s ease-in-out;
 }
 #wrap #main .section1 .sec1_container .sec1_content .slide_text2 .Br {
   color: #DBB27A;
@@ -228,11 +228,14 @@
   }
 }
 @keyframes slide2 {
-  from {
+  0% {
     left: 1600px;
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0.4;
+  }
+  100% {
     left: 0px;
     opacity: 1;
   }
@@ -246,6 +249,9 @@
     left: -1600px;
     opacity: 0;
   }
+}
+#wrap #main .section2 .sec2_container {
+  animation: sec2Fade 2s ease-in-out 3s forwards;
 }
 #wrap #main .section2 .sec2_container .sec2_content {
   position: absolute;
@@ -280,6 +286,22 @@
   line-height: 125px;
   text-rendering: optimizeLegibility;
   letter-spacing: -0.1rem;
+}
+@keyframes sec2Fade {
+  0% {
+    opacity: 0;
+    transform: "translateY(300px)";
+  }
+  30% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 #wrap #main .section3 .sec3_container .sec3_content {
   position: absolute;
@@ -438,6 +460,11 @@
   color: #000;
   letter-spacing: -0.5rem;
 }
+#wrap #main .section5 .sec5_container .background_img {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
 #wrap #main .section5 .sec5_container .sec5_content {
   position: absolute;
   left: calc(50% - 300px - 500px);
@@ -503,33 +530,33 @@
   bottom: -40px;
   width: 500px;
   height: 300px;
+  font-family: "SUIT";
+  font-style: normal;
   color: #000;
 }
 #wrap #main .section5 .sec5_container .sec5_gap .text2 h5 {
   padding-bottom: 30px;
-  font-family: "Outfit";
-  font-style: normal;
   font-weight: 500;
   font-size: 50px;
   line-height: 63px;
 }
 #wrap #main .section5 .sec5_container .sec5_gap .text2 h6 {
-  font-family: "SUIT";
-  font-style: normal;
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
 }
 #wrap #main .section6 .sec6_container .sec6_content {
   position: absolute;
-  top: 200px;
-  left: calc(50% - 262.5px);
-  width: 600px;
+  top: 210px;
+  left: calc(50% - 265px);
+  left: 790px;
+  left: 44rem;
+  width: 530px;
   height: 700px;
 }
 #wrap #main .section6 .sec6_container .sec6_content .contact {
   position: absolute;
-  left: 0;
+  left: -1.4rem;
   top: 0;
   font-family: "Cormorant Garamond";
   font-style: italic;
@@ -544,7 +571,7 @@
 #wrap #main .section6 .sec6_container .sec6_content .sec6_gap {
   position: absolute;
   left: calc(50% - 166px);
-  top: 250px;
+  top: 280px;
   width: 332px;
   height: 185px;
   font-family: "Cormorant";
@@ -574,7 +601,7 @@
 #wrap #main .section6 .sec6_container .sec6_content .proposal {
   position: absolute;
   left: calc(50% - 287.5px + 50px);
-  bottom: 70px;
+  bottom: 30px;
   font-family: "Cormorant Garamond";
   font-style: italic;
   font-weight: 300;
@@ -582,16 +609,20 @@
   color: #000;
   letter-spacing: -0.3rem;
 }
+#wrap #main .section7 {
+  animation: backColor 2s ease-in-out 8s forwards;
+}
 #wrap #main .section7 .sec7_container .sec7_content {
   position: absolute;
   top: 200px;
   left: calc(50% - 555px);
+  left: 25.3rem;
   width: 1110px;
   height: 700px;
 }
 #wrap #main .section7 .sec7_container .sec7_content .proposal {
   position: absolute;
-  left: calc(50% - 287.5px);
+  left: 16.7rem;
   top: 0;
   font-family: "Cormorant Garamond";
   font-style: italic;
@@ -603,7 +634,7 @@
 }
 #wrap #main .section7 .sec7_container .sec7_content .sec7_gap {
   position: absolute;
-  left: calc(50% - 555px);
+  left: 0;
   top: 330px;
   width: 1110px;
   height: 150px;
@@ -619,11 +650,12 @@
   position: absolute;
   top: -40px;
   left: 0;
+  animation: color1 2s ease-in-out 10s forwards;
 }
-#wrap #main .section7 .sec7_container .sec7_content .sec7_gap h3 {
+#wrap #main .section7 .sec7_container .sec7_content .sec7_gap .sec7_text {
   position: absolute;
   top: 25px;
-  left: calc(50% - 407px);
+  left: 9.25rem;
   font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
@@ -636,10 +668,11 @@
   position: absolute;
   top: -40px;
   right: 0;
+  animation: color2 2s ease-in-out 10s forwards;
 }
 #wrap #main .section7 .sec7_container .sec7_content .contact {
   position: absolute;
-  left: calc(50% - 197px - 15px);
+  left: 20.5rem;
   bottom: 0;
   font-family: "Cormorant Garamond";
   font-style: italic;
@@ -648,9 +681,42 @@
   line-height: 182px;
   letter-spacing: -0.3rem;
   color: #000;
+  animation: trans 2s ease-in-out 10s forwards;
+}
+@keyframes trans {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+@keyframes color1 {
+  0% {
+    color: #DBB27A;
+  }
+  100% {
+    color: #fff;
+  }
+}
+@keyframes color2 {
+  0% {
+    color: #DBB27A;
+  }
+  100% {
+    color: #fff;
+  }
+}
+@keyframes backColor {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: #FFDA55;
+  }
 }
 #wrap #main .section8 {
-  background-color: #000;
+  background-color: #FFDA55;
 }
 #wrap #main .section8 .sec8_container {
   width: 100%;
@@ -679,7 +745,7 @@
 #wrap #main .section8 .sec8_container .menu li {
   font-size: 25px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   font-family: "Outfit";
   font-style: normal;
   text-align: right;
@@ -688,13 +754,14 @@
 #wrap #main .section8 .sec8_container .sec8_content {
   position: absolute;
   top: 200px;
-  left: calc(50% - 555px);
+  left: 25.3rem;
   width: 1110px;
   height: 700px;
 }
 #wrap #main .section8 .sec8_container .sec8_content .proposal {
   position: absolute;
   left: calc(50% - 287.5px);
+  left: 16.7rem;
   top: 0;
   font-family: "Cormorant Garamond";
   font-style: italic;
@@ -702,11 +769,11 @@
   font-size: 200px;
   line-height: 242px;
   letter-spacing: -0.3rem;
-  color: #fff;
+  color: #000;
 }
 #wrap #main .section8 .sec8_container .sec8_content .sec8_gap {
   position: absolute;
-  left: calc(50% - 555px);
+  left: 0;
   top: 330px;
   width: 1110px;
   height: 150px;
@@ -715,24 +782,24 @@
   font-weight: 200;
   font-size: 190px;
   line-height: 230px;
-  color: #DBB27A;
+  color: #fff;
 }
 #wrap #main .section8 .sec8_container .sec8_content .sec8_gap .sec8_brace1 {
   position: absolute;
   top: -40px;
   left: 0;
 }
-#wrap #main .section8 .sec8_container .sec8_content .sec8_gap h3 {
+#wrap #main .section8 .sec8_container .sec8_content .sec8_gap .sec8_text {
   position: absolute;
   top: 25px;
-  left: calc(50% - 407px);
+  left: 9.25rem;
   font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
   font-size: 37px;
   line-height: 140%;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 #wrap #main .section8 .sec8_container .sec8_content .sec8_gap .sec8_brace2 {
   position: absolute;
@@ -741,7 +808,7 @@
 }
 #wrap #main .section8 .sec8_container .sec8_content .contact {
   position: absolute;
-  left: calc(50% - 197px - 135px);
+  left: 14rem;
   bottom: 0;
   font-family: "Cormorant Garamond";
   font-style: italic;
@@ -749,7 +816,7 @@
   font-size: 150px;
   line-height: 182px;
   letter-spacing: -0.3rem;
-  color: #DBB27A;
+  color: #000;
 }
 #wrap #main .section8 .sec8_container .sec8_content .object {
   position: absolute;
@@ -781,14 +848,12 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-family: "SUIT";
-  font-style: normal;
 }
 #wrap #main .section9 .sec9_container .sec9_content h3 {
   position: absolute;
   left: 0;
   top: 54px;
-  font-family: "Outfit";
+  font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -814,14 +879,12 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-family: "SUIT";
-  font-style: normal;
 }
 #wrap #main .section10 .sec10_container .sec10_content h3 {
   position: absolute;
   left: 0;
   top: 54px;
-  font-family: "Outfit";
+  font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -841,14 +904,12 @@
   width: 642.33px;
   height: 353px;
   color: #000;
-  font-family: "SUIT";
-  font-style: normal;
 }
 #wrap #main .section11 .sec11_container .sec11_content h3 {
   position: absolute;
   left: 0;
   top: 154px;
-  font-family: "Outfit";
+  font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
   font-size: 70px;
@@ -889,14 +950,12 @@
   line-height: 125px;
   text-align: center;
 }
-#wrap #main .section12 .sec12_container .sec12_content span {
-  display: inherit;
-}
 #wrap #main .section12 .sec12_container .sec12_content span.after {
+  display: inherit;
   border-top: 15px solid #B2E1A1;
   margin-top: -60px;
-  width: 0px;
-  animation: decoLine 1s ease 1s forwards;
+  width: 0;
+  animation: decoLine 1s ease 0.5s forwards;
 }
 #wrap #main .section12 .sec12_container .sec12_gap2 {
   position: absolute;
@@ -917,12 +976,18 @@
   }
   to {
     width: 22rem;
+    height: 20rem;
     opacity: 0.7;
     left: -10px;
   }
 }
 #wrap #main .section13 {
   background-color: #000;
+}
+#wrap #main .section13 .sec13_container .backgrond_img {
+  position: absolute;
+  top: 0;
+  left: 70rem;
 }
 #wrap #main .section13 .sec13_container .logo {
   position: absolute;
@@ -968,11 +1033,14 @@
   font-size: 50px;
   font-weight: 200;
   text-decoration: underline;
-  text-decoration-thickness: 0;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
   line-height: 73px;
 }
 #wrap #main .section13 .sec13_container .sec13_content .bottom {
   color: #fff;
+  font-family: "Outfit";
+  font-style: normal;
   padding-top: 50px;
 }
 #wrap #main .section13 .sec13_container .sec13_content .bottom .address {

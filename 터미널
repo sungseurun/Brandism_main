@@ -1,0 +1,18 @@
+// 터미널에서 git 배포 방법
+
+1. git init
+
+2. git add .
+
+3. git status
+
+4. git commit -m "first commit"
+
+5. git remote add origin https://github.com/sungseurun/brandism.git
+
+??// 혹시나 여기서 error: remote origin already exists 가 나온다면 
+git remote remove origin   치면 삭제됨
+
+6. git remote -v
+
+7. git push origin master

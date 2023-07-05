@@ -77,6 +77,7 @@
 
     // 모든 섹션에 주는 style
     .section {
+      // opacity: 0;
       visibility: hidden;
       position: absolute;
       top:0;
@@ -126,7 +127,7 @@
             text-align: center;
             color: #000;
             line-height: 360px;
-            animation: slide1 3s ease-in-out;  // 슬라이드 애니메이션1
+            animation: slide1 2s ease-in-out forwards;  // 슬라이드 애니메이션1
             .we {
               position: absolute;
               left: 0;
@@ -173,7 +174,7 @@
             font-weight: 200;
             font-size: 250px;
             line-height: 100%;
-            animation: slide2 3s ease-in-out;  // 슬라이드 애니메이션2
+            animation: slide2 2.3s ease-in-out;  // 슬라이드 애니메이션2
             .Br {
               color: #DBB27A;
               width: 1050px;
@@ -217,14 +218,17 @@
         from {left: -600px; opacity: 0;}
         to { left: calc(50% - 957px/2 ); opacity: 1;}
       }
+      // 굳이 없어도 되긴함
       @keyframes disappear {
         from { left: calc(50% - 957px/2 ); opacity: 1;}
         to {left: -600px; opacity: 0;}
       }
       @keyframes slide2 {
-        from {left: 1600px; opacity: 0;}
-        to {left: 0px; opacity: 1;}
+        0% {left: 1600px; opacity: 0;}
+        50% {opacity: 0.4;}
+        100% {left: 0px; opacity: 1;}
       }
+      // 굳이 없어도 되긴함
       @keyframes disappear {
         from {left: 0; opacity: 1;}
         to {left: -1600px; opacity: 0;}
@@ -241,7 +245,9 @@
       .sec2_container {
         // position: relative;
         // width: 100%;
+        animation: sec2Fade 2s ease-in-out 3s forwards;
         .sec2_content {
+          // opacity: 0;
           position: absolute;
           top: 450px;
           left: calc(50% - 1219px/2 + 30px);
@@ -276,6 +282,13 @@
             letter-spacing: -0.1rem;
           }
         }
+      }
+      @keyframes sec2Fade {
+        0% {opacity: 0; transform: 'translateY(300px)';}
+        30% {opacity: 0.3;}
+        70% {opacity: 0.7;}
+        100% {opacity: 1; transform: none;}
+        
       }
     }
     .section3 {
@@ -488,6 +501,11 @@
       .sec5_container {
         // position: relative;
         // width: 100%;
+        .background_img {
+          position: absolute;
+          top: 100px;
+          left: 0;
+        }
         .sec5_content {
           position: absolute;
           left: calc(50% - 600px/2 - 500px);  //left: 200 px;
@@ -552,18 +570,16 @@
               bottom: -40px;
               width: 500px;
               height: 300px;
+              font-family: 'SUIT';
+              font-style: normal;
               color: #000;
               h5 {
                 padding-bottom: 30px;
-                font-family: 'Outfit';
-                font-style: normal;
                 font-weight: 500;
                 font-size: 50px;
                 line-height: 63px;
               }
               h6 {
-                font-family: 'SUIT';
-                font-style: normal;
                 font-weight: 300;
                 font-size: 20px;
                 line-height: 30px;
@@ -580,18 +596,16 @@
       // width: 100%;
       // height: 100%;
       .sec6_container {
-        // position: relative;
-        // width: 100%;
         .sec6_content {
           position: absolute;
-          top: 200px;  
-          left: calc(50% - 525px/2);
-          width: 600px;
+          top: 210px;  
+          left: calc(50% - 530px/2); left: 790px;
+          left: 44rem;
+          width: 530px;
           height: 700px;
-
           .contact {
             position: absolute;
-            left: 0;
+            left: -1.4rem;  //-20px
             top: 0;
             font-family: 'Cormorant Garamond';
             font-style: italic;
@@ -606,7 +620,7 @@
           .sec6_gap {
             position: absolute;
             left: calc(50% - 332px/2);
-            top: 250px;
+            top: 280px;
             width: 332px;
             height: 185px;
             font-family: 'Cormorant';
@@ -638,7 +652,7 @@
           .proposal {
             position: absolute;
             left: calc(50% - 575px/2 + 50px);
-            bottom: 70px; 
+            bottom: 30px; 
             font-family: 'Cormorant Garamond';
             font-style: italic;
             font-weight: 300;
@@ -655,19 +669,20 @@
       // position: relative;
       // width: 100%;
       // height: 100%;
+      animation: backColor 2s ease-in-out 8s forwards;
       .sec7_container {
-        // position: relative;
-        // width: 100%;
+        
         .sec7_content {
           position: absolute;
           top: 200px;
           left: calc(50% - 1110px/2);
+          left: 25.3rem;
           width: 1110px;
           height: 700px;
-
           .proposal {
             position: absolute;
-            left: calc(50% - 575px/2);
+            // left: calc(50% - 575px/2); 
+            left: 16.7rem;
             top: 0;
             font-family: 'Cormorant Garamond';
             font-style: italic;
@@ -679,7 +694,7 @@
           }
           .sec7_gap {
             position: absolute;
-            left: calc(50% - 1110px/2 );  //left: 20px;
+            left: 0;
             top: 330px;
             width: 1110px;
             height: 150px;
@@ -694,13 +709,13 @@
               position: absolute;
               top: -40px;
               left: 0;
+              animation: color1 2s ease-in-out 10s forwards;
             }
-            h3 {
+            .sec7_text {
               position: absolute;
               top: 25px;
-              left: calc(50% - 814px/2);
-              // width: 814px;
-              // height: 79px;
+              // left: calc(50% - 814px/2);  
+              left: 9.25rem;
               font-family: 'SUIT';
               font-style: normal;
               font-weight: 500;
@@ -709,15 +724,17 @@
               text-align: center;
               color: #000
             }
-            . sec7_brace2 {
+            .sec7_brace2 {
               position: absolute;
               top: -40px;
               right: 0;
+              animation: color2 2s ease-in-out 10s forwards;
             }
           }
           .contact {
             position: absolute;
-            left: calc(50% - 394px/2 - 15px);
+            // left: calc(50% - 394px/2 - 30px); left: 328px;
+            left: 20.5rem;
             bottom: 0;
             font-family: 'Cormorant Garamond';
             font-style: italic;
@@ -726,8 +743,27 @@
             line-height: 182px;
             letter-spacing: -0.3rem;
             color: #000;
+            animation: trans 2s ease-in-out 10s forwards ;
           }
         }
+      }
+      @keyframes trans {
+        from {transform: translateX(0px);}
+        to {transform: translateX(-200px);}
+      }
+
+      @keyframes color1 {
+        0% {color: #DBB27A;}
+        100% {color: #fff;}
+      }
+      @keyframes color2 {
+        0% {color: #DBB27A;}
+        100% {color: #fff;}
+      }
+
+      @keyframes backColor {
+        0% {background-color: #fff;}
+        100% {background-color: #FFDA55;}
       }
     }
   
@@ -736,7 +772,7 @@
       // position: relative;
       // width: 100%;
       // height: 100%;
-      background-color: #000;
+      background-color: #FFDA55;
       .sec8_container {
         width: 100%;
         position: relative;
@@ -766,7 +802,7 @@
           li {
             font-size: 25px;
             font-weight: 700;
-            color: #fff ;
+            color: #000 ;
             font-family: 'Outfit';
             font-style: normal;
             text-align: right;
@@ -776,13 +812,15 @@
         .sec8_content {
           position: absolute;
           top: 200px;
-          left: calc(50% - 1110px/2);
+          // left: calc(50% - 1110px/2);
+          left: 25.3rem;
           width: 1110px;
           height: 700px;
 
           .proposal {
             position: absolute;
-            left: calc(50% - 575px/2);
+            left: calc(50% - 575px/2); 
+            left: 16.7rem;
             top: 0;
             font-family: 'Cormorant Garamond';
             font-style: italic;
@@ -790,11 +828,11 @@
             font-size: 200px;
             line-height: 242px;
             letter-spacing: -0.3rem;
-            color: #fff;
+            color: #000;
           }
           .sec8_gap {
             position: absolute;
-            left: calc(50% - 1110px/2); 
+            left: 0; 
             top: 330px;
             width: 1110px;
             height: 150px;
@@ -803,23 +841,24 @@
             font-weight: 200;
             font-size: 190px;
             line-height: 230px;
-            color: #DBB27A;
+            color: #fff;
             .sec8_brace1 {
               position: absolute;
               top: -40px;
               left: 0;
             }
-            h3 {
+            .sec8_text {
               position: absolute;
               top: 25px;
-              left: calc(50% - 814px/2);
+              // left: calc(50% - 814px/2);  left: 148px;
+              left: 9.25rem;
               font-family: 'SUIT';
               font-style: normal;
               font-weight: 500;
               font-size: 37px;
               line-height: 140%;  // 51.8px 
               text-align: center;
-              color: #fff;
+              color: #000;
             }
             .sec8_brace2 {
               position: absolute;
@@ -829,7 +868,8 @@
           }
           .contact {
             position: absolute;
-            left: calc(50% - 394px/2 - 135px);
+            // left: calc(50% - 394px/2 - 133px);  left: 225px;
+            left: 14rem;
             bottom: 0;
             font-family: 'Cormorant Garamond';
             font-style: italic;
@@ -837,7 +877,7 @@
             font-size: 150px;
             line-height: 182px;
             letter-spacing: -0.3rem;
-            color: #DBB27A;
+            color: #000;
           }
           .object {
             position: absolute;
@@ -888,14 +928,11 @@
           text-align: center;
           justify-content: center;
           align-items: center;
-          font-family: 'SUIT';
-          font-style: normal;
-          
           h3 {
             position: absolute;
             left: 0;
             top: 54px;
-            font-family: 'Outfit';
+            font-family: 'SUIT';
             font-style: normal;
             font-weight: 500;
             font-size: 70px;
@@ -930,14 +967,11 @@
           text-align: center;
           justify-content: center;
           align-items: center;
-          font-family: 'SUIT';
-          font-style: normal;
-          
           h3 {
             position: absolute;
             left: 0;
             top: 54px;
-            font-family: 'Outfit';
+            font-family: 'SUIT';
             font-style: normal;
             font-weight: 500;
             font-size: 70px;
@@ -968,13 +1002,11 @@
           width: 642.33px;
           height: 353px; 
           color: #000;
-          font-family: 'SUIT';
-          font-style: normal;
           h3 {
             position: absolute;
             left: 0;
             top: 154px;
-            font-family: 'Outfit';
+            font-family: 'SUIT';
             font-style: normal;
             font-weight: 500;
             font-size: 70px;
@@ -1029,12 +1061,13 @@
             text-align: center;
           }
           span {
-            display: inherit;
+            // display: inherit;
             &.after {
+              display: inherit;
               border-top:15px solid #B2E1A1;
               margin-top: -60px;
-              width:0px;
-              animation: decoLine 1s ease 1s forwards;
+              width:0;
+              animation: decoLine 1s ease .5s forwards;
             }
           }
         }
@@ -1052,7 +1085,8 @@
       }
       @keyframes decoLine {
         from {width: 0px; opacity: 0.5;left: -100px;}
-        to {width: 22rem; opacity: 0.7;left: -10px;}
+        to {width: 22rem;height: 20rem; opacity: 0.7;left: -10px;}
+        // 집에서는 width: 26rem; 정도가 맞음 why?
       }
     }
 
@@ -1065,8 +1099,11 @@
       // height: 100%;
       background-color: #000;
       .sec13_container {
-        // width: 100%;
-        // position: absolute;
+        .backgrond_img {
+          position: absolute;
+          top: 0;
+          left: 70rem;
+        }
         .logo {
           position: absolute;
           left: calc(50% - 285px/2 - 715px);
@@ -1118,12 +1155,16 @@
               font-size: 50px;
               font-weight: 200;
               text-decoration: underline;
-              text-decoration-thickness: 0;   // 선 두께
+              text-decoration-thickness: 2px;   // 선 두께
+              text-underline-position: under;
+              // text-underline-offset: 1px;
               line-height: 73px;
             }
           }
           .bottom {
             color: #fff;
+            font-family: 'Outfit';
+            font-style: normal;
             padding-top: 50px;
             .address {
               padding-bottom: 20px;

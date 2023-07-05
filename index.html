@@ -60,7 +60,7 @@
 
     <section id="section2" class="section section2 ">
       <div class="sec2_container container" id="sec2_fade">
-        <div class="sec2_content on" >
+        <div class="sec2_content" >
           <h3 class="h3">항상 새로운 것만, 전율이 일어나는,</h3>
           <h4 class="h4">우리는 브랜디즘 스튜디오입니다.</h4>
         </div>
@@ -90,10 +90,10 @@
           <div class="sec4_gap" id="sec4_text">
             <div class="sec4_text1">
               <span class="sec4_brace1">{</span>
-              <p class="left" id="sec4_text1"> 디자인에 진심인 사람들만 모였습니다.</p>
+              <p class="left"> 디자인에 진심인 사람들만 모였습니다.</p>
              </div>
              <div class="sec4_text2">
-              <p class="right" id="sec4_text2">세상에 능력자는 많지만, 내 과업인 것처럼 생각하는 디자이너는 없을까.
+              <p class="right">세상에 능력자는 많지만, 내 과업인 것처럼 생각하는 디자이너는 없을까.
                 점토에서 도기가 되듯, 똑 맞아 떨어지는 디자인을 보여드릴게요.</p>
               <span class="sec4_brace2">}</span>
             </div>
@@ -105,6 +105,7 @@
 
     <section id="section5" class="section section5">
       <div class="sec5_container container">
+        <div class="background_img"><img src="./img/img_gradation_1.png" alt=""></div>
         <div class="sec5_content">
           <div class="sec5_img1" id="sec5_img1"><img src="./img/img_5.png" alt=""></div>
           <div class="sec5_img2" id="sec5_img2"><img src="./img/img_4.png" alt=""></div>
@@ -115,7 +116,7 @@
             <h4>none- astray</h4>
           </div>
           <div class="text2" id="sec5_text2">
-            <h5>근간에 엇나가지 않는 본질에 집중합니다.</h5>
+            <h5>근간에 엇나가지 않는 <br> 본질에 집중합니다.</h5>
             <h6>모든 기획력과 디자인에는 이유가 따라붙어야하기 때문에 <br>
               이유없는 디자인에 매달리지 않습니다. <br>
               생각지 못한 기획에서 비롯된 창작물을 빚는 브랜디즘입니다.</h6>
@@ -141,37 +142,38 @@
     <section id="section7" class="section section7">
       <div class="sec7_container container">
         <div class="sec7_content">
-          <div class="proposal">pro;posal</div>
+          <div class="proposal" id="sec7_proposal">pro;posal</div>
           <div class="sec7_gap">
-            <span class="sec7_brace1">{</span>
-            <h3>정말 제대로 된 제안, 당기지 않으세요? <br>
+            <span class="sec7_brace1" id="sec7_brace1">{</span>
+            <h3 class="sec7_text" id="sec7_text">정말 제대로 된 제안, 당기지 않으세요? <br>
               당신의 흥미를 끌어낼 수 있는 여기 브랜디즘 스튜디오에.</h3>
-            <span class="sec7_brace2">}</span>
+            <span class="sec7_brace2" id="sec7_brace2">}</span>
           </div>
-          <div class="contact">Contact</div>
+          <div class="contact" id="sec7_contact">Contact</div>
         </div>
       </div>
     </section>
 
     <section id="section8" class="section section8">
       <div class="sec8_container container">
-        <div class="logo" >
+        <!-- <div class="logo" >
           <a href="#" class="logo-btn"><img id="header-logo" src="./img/logo_w.png" alt=""></a>
-          <!-- <textarea style="margin-top: -20%;" id="wheelNumberPrint2"></textarea> -->
         </div>
         <ul class="menu" id="header-menu">
           <li>About</li>
           <li>Portfolio</li>
           <li>Our</li>
           <li>Contact</li>
-        </ul>
+        </ul> -->
         <div class="sec8_content">
           <div class="proposal">pro;posal</div>
           <div class="sec8_gap">
-            <span class="sec8_brace1">{</span>
-            <h3>정말 제대로 된 제안, 당기지 않으세요? <br>
-              당신의 흥미를 끌어낼 수 있는 여기 브랜디즘 스튜디오에.</h3>
-            <span class="sec8_brace2">}</span>
+            <span class="sec8_brace1" id="sec8_brace1">{</span>
+            <h3 class="sec8_text" id="sec8_text">
+              정말 제대로 된 제안, 당기지 않으세요? <br>
+              당신의 흥미를 끌어낼 수 있는 여기 브랜디즘 스튜디오에.
+            </h3>
+            <span class="sec8_brace2" id="sec8_brace2">}</span>
           </div>
           <div class="contact" id="sec8_contact">Contact</div>
           <div class="object" id="sec8_object">
@@ -228,8 +230,8 @@
     </section>
 
     <section id="section13" class="section section13">
-      <div class="sec12_container container">
-        <div class="sec13_container ">
+      <div class="sec13_container container">
+        <div class="backgrond_img"><img src="./img/img_gradation_ft.png" alt=""></div>
         <div class="logo" id="logo">
           <a href="#" class="logo-btn"><img id="logo-img" src="./img/logo.png" alt=""></a>
           <!-- <textarea style="margin-top: -10%;" id="wheelNumberPrint3"></textarea>  -->
@@ -275,12 +277,6 @@
     </section>
   </footer>
   
-
-<script>
-  const dateFormMaker = function () {
-    console.log(document.querySelector('#section2').value);
-  };
-</script>
 
   <!-- jQuery & Bootstrap -->
   <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
