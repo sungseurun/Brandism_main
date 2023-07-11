@@ -169,3 +169,17 @@ function section13Event(){
   // console.log('translateY' + beforeTranslateY);
   // console.log('translateY' + afterTranslateY);
 }
+
+function section12Event() {
+  // 브랜디즘 밑줄 부분 이벤트 (아이디만 토글로 불러와서 css 적용 - setTimeout으로 딜레이 줌)
+  let brush = document.getElementById('sec12_brush').classList.contains("brush");
+  
+  if(!brush){
+    document.getElementById('sec12_brush').classList.toggle("brush");
+  } else {
+    document.getElementById('sec12_brush').classList.toggle("brush");
+    setTimeout(function() {
+      document.getElementById('sec12_brush').classList.toggle("brush");  
+    }, 100);
+  }
+};
