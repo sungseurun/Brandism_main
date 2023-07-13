@@ -62,8 +62,6 @@
 #wrap #main {
   z-index: 2;
   position: relative;
-  max-width: 3840px;
-  min-width: 1920px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -74,8 +72,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 3840px;
-  min-width: 1920px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -124,6 +120,7 @@
   left: calc(50% - 166px + 80px);
   top: 20px;
   animation: sec1Img 2.5s ease-in infinite;
+  width: max-width;
 }
 @keyframes sec1Img {
   0% {
@@ -209,7 +206,7 @@
 }
 @keyframes slide1 {
   from {
-    left: -800px;
+    left: -1000px;
     opacity: 0;
   }
   to {
@@ -632,7 +629,6 @@
   font-style: normal;
   font-weight: 200;
   font-size: 10.625rem;
-  display: flex;
   color: #DBB27A;
 }
 #wrap #main .section7 .sec7_container .sec7_content .sec7_gap .sec7_brace1 {
@@ -690,7 +686,7 @@
 #wrap #main .section8 {
   background-color: #FFDA55;
 }
-#wrap #main .section8 .sec9_container .sec9_content {
+#wrap #main .section8 .sec8_container .sec8_content {
   position: absolute;
   top: 360px;
   left: calc(50% - 225px);
@@ -702,7 +698,7 @@
   justify-content: center;
   align-items: center;
 }
-#wrap #main .section8 .sec9_container .sec9_content h3 {
+#wrap #main .section8 .sec8_container .sec8_content h3 {
   position: absolute;
   left: 0;
   top: 54px;
@@ -711,7 +707,7 @@
   font-weight: 500;
   font-size: 3.75rem;
 }
-#wrap #main .section8 .sec9_container .sec9_content img {
+#wrap #main .section8 .sec8_container .sec8_content img {
   position: absolute;
   left: calc(50% - 100px + 135px);
   top: -25px;
@@ -719,7 +715,7 @@
 #wrap #main .section9 {
   background-color: #BCF8A7;
 }
-#wrap #main .section9 .sec10_container .sec10_content {
+#wrap #main .section9 .sec9_container .sec9_content {
   position: absolute;
   top: 360px;
   left: calc(50% - 225px);
@@ -730,7 +726,7 @@
   justify-content: center;
   align-items: center;
 }
-#wrap #main .section9 .sec10_container .sec10_content h3 {
+#wrap #main .section9 .sec9_container .sec9_content h3 {
   position: absolute;
   left: 0;
   top: 54px;
@@ -739,12 +735,12 @@
   font-weight: 500;
   font-size: 3.75rem;
 }
-#wrap #main .section9 .sec10_container .sec10_content img {
+#wrap #main .section9 .sec9_container .sec9_content img {
   position: absolute;
   left: calc(50% - 100px + 135px);
   top: -55px;
 }
-#wrap #main .section10 .sec11_container .sec11_content {
+#wrap #main .section10 .sec10_container .sec10_content {
   position: absolute;
   top: 360px;
   left: calc(50% - 285px);
@@ -752,7 +748,7 @@
   height: 270px;
   color: #000;
 }
-#wrap #main .section10 .sec11_container .sec11_content h3 {
+#wrap #main .section10 .sec10_container .sec10_content h3 {
   position: absolute;
   left: 0;
   top: 54px;
@@ -761,17 +757,17 @@
   font-weight: 500;
   font-size: 3.75rem;
 }
-#wrap #main .section10 .sec11_container .sec11_content .image1 {
+#wrap #main .section10 .sec10_container .sec10_content .image1 {
   position: absolute;
   right: 0;
   bottom: 0;
 }
-#wrap #main .section10 .sec11_container .sec11_content .image2 { /* 위에 올라오는 스크류 */
+#wrap #main .section10 .sec10_container .sec10_content .image2 { /* 위에 올라오는 스크류 */
   position: absolute;
   left: 260px;
   top: -105px;
 }
-#wrap #main .section11 .sec12_container .sec12_gap1 {
+#wrap #main .section11 .sec11_container .sec11_gap1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -779,16 +775,51 @@
   width: 423px;
   height: 423px;
 }
-#wrap #main .section11 .sec12_container .sec12_gap1 > img {
+#wrap #main .section11 .sec11_container .sec11_gap1 > img {
   width: 423px;
   height: 423px;
 }
-#wrap #main .section11 .sec12_container .sec12_content {
+#wrap #main .section11 .sec11_container .sec11_content {
   position: absolute;
   top: 330px;
-  left: calc(50% - 298px);
+  left: calc(50% - 390px);
+  width: 780px;
+  height: 300px;
 }
-#wrap #main .section11 .sec12_container .sec12_content p {
+#wrap #main .section11 .sec11_container .sec11_content .sec11_text {
+  position: relative;
+  color: #000;
+  font-family: "SUIT";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5.625rem;
+  line-height: 115px;
+}
+#wrap #main .section11 .sec11_container .sec11_content .sec11_text1 {
+  position: relative;
+  text-align: center;
+}
+#wrap #main .section11 .sec11_container .sec11_content .sec11_wrap {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 490px;
+  height: 160px;
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.3125rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #DBB27A;
+}
+#wrap #main .section11 .sec11_container .sec11_content .sec11_wrap .sec11_brace1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#wrap #main .section11 .sec11_container .sec11_content .sec11_wrap .sec11_textBr {
   position: relative;
   z-index: 3;
   color: #000;
@@ -796,67 +827,64 @@
   font-style: normal;
   font-weight: 600;
   font-size: 5.625rem;
-  line-height: 125px;
   text-align: center;
-  line-height: 115px;
+  display: flex;
 }
-#wrap #main .section11 .sec12_container .sec12_content .brush {
-  display: inherit;
-  position: relative;
-}
-#wrap #main .section11 .sec12_container .sec12_content .brush img {
-  opacity: 0;
-  vertical-align: middle;
+#wrap #main .section11 .sec11_container .sec11_content .sec11_wrap .sec11_brace2 {
   position: absolute;
-  left: -50px;
-  bottom: 0;
+  right: 0;
+  top: 0;
 }
-#wrap #main .section11 .sec12_container .sec12_gap2 {
+#wrap #main .section11 .sec11_container .sec11_content .sec11_text2 {
+  text-align: right;
+  padding-top: 5px;
+}
+#wrap #main .section11 .sec11_container .sec11_gap2 {
   position: absolute;
   top: 570px;
   left: calc(50% - 211.5px + 745px);
   width: 423px;
   height: 423px;
 }
-#wrap #main .section11 .sec12_container .sec12_gap2 > img {
+#wrap #main .section11 .sec11_container .sec11_gap2 > img {
   width: 423px;
   height: 423px;
 }
 #wrap #main .section12 {
   background-color: #000;
 }
-#wrap #main .section12 .sec13_container .backgrond_img {
+#wrap #main .section12 .sec12_container .backgrond_img {
   position: absolute;
   top: 0;
   left: calc(50% - 407px + 540px);
 }
-#wrap #main .section12 .sec13_container .logo {
+#wrap #main .section12 .sec12_container .logo {
   position: absolute;
   left: calc(50% - 142.5px - 715px);
   top: 60px;
   width: 285px;
   height: 66px;
 }
-#wrap #main .section12 .sec13_container .logo .logo-btn img {
+#wrap #main .section12 .sec12_container .logo .logo-btn img {
   position: absolute;
   top: 0;
   left: 0;
   width: 281px;
   height: 65.12px;
 }
-#wrap #main .section12 .sec13_container .number {
+#wrap #main .section12 .sec12_container .number {
   position: absolute;
   top: 95px;
   right: calc(50% - 230.5px - 600px);
 }
-#wrap #main .section12 .sec13_container .number a {
+#wrap #main .section12 .sec12_container .number a {
   cursor: pointer;
 }
-#wrap #main .section12 .sec13_container .number a img {
+#wrap #main .section12 .sec12_container .number a img {
   float: right;
   width: 80%;
 }
-#wrap #main .section12 .sec13_container .sec13_content {
+#wrap #main .section12 .sec12_container .sec12_content {
   opacity: 0;
   position: absolute;
   top: 280px;
@@ -864,12 +892,12 @@
   left: calc(50% - 439.5px - 430px);
   width: 880px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .middle {
+#wrap #main .section12 .sec12_container .sec12_content .middle {
   color: #fff;
   font-family: "Outfit";
   font-style: normal;
 }
-#wrap #main .section12 .sec13_container .sec13_content .middle .menu {
+#wrap #main .section12 .sec12_container .sec12_content .middle .menu {
   font-size: 2.8125rem;
   font-weight: 200;
   text-decoration: underline;
@@ -877,41 +905,41 @@
   text-underline-position: under;
   line-height: 73px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom {
+#wrap #main .section12 .sec12_container .sec12_content .bottom {
   color: #fff;
   font-family: "Outfit";
   font-style: normal;
   padding-top: 50px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom .address {
+#wrap #main .section12 .sec12_container .sec12_content .bottom .address {
   padding-bottom: 20px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom .address h3 {
+#wrap #main .section12 .sec12_container .sec12_content .bottom .address h3 {
   font-size: 1.875rem;
   font-weight: 600;
   line-height: 37.8px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom .address h4 {
+#wrap #main .section12 .sec12_container .sec12_content .bottom .address h4 {
   font-family: "SUIT";
   font-weight: 300;
   font-size: 1.1rem;
   line-height: 26px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom .mail {
+#wrap #main .section12 .sec12_container .sec12_content .bottom .mail {
   padding-bottom: 20px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom .mail h3 {
+#wrap #main .section12 .sec12_container .sec12_content .bottom .mail h3 {
   font-size: 1.875rem;
   font-weight: 600;
   line-height: 37.8px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom .mail h4 {
+#wrap #main .section12 .sec12_container .sec12_content .bottom .mail h4 {
   font-family: "SUIT";
   font-weight: 300;
   font-size: 1.1rem;
   line-height: 26px;
 }
-#wrap #main .section12 .sec13_container .sec13_content .bottom .copyright {
+#wrap #main .section12 .sec12_container .sec12_content .bottom .copyright {
   font-family: "SUIT";
   font-weight: 300;
   font-size: 1.1rem;

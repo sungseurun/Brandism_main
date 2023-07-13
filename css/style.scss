@@ -64,8 +64,9 @@
   #main {
     z-index: 2;
     position: relative;
-    max-width: 3840px;
-    min-width: 1920px;
+    // max-width: 3840px;
+    // min-width: 1920px;
+    // max-width: 1920px;
     width: 100%;
     height: 100%;     // 메인 전체 높이를 설정하지 않고 100%로 해줘야 스크롤이 생기지 않음
     margin: 0 auto;
@@ -77,8 +78,8 @@
       position: absolute;
       top:0;
       left:0;
-      max-width: 3840px;
-      min-width: 1920px;
+      // max-width: 3840px;
+      // min-width: 1920px;
       width: 100%;
       height: 100%;
       margin: 0 auto;
@@ -136,6 +137,7 @@
               left: calc(50% - 332px/2 + 80px);  //left: 315px;
               top: 20px;  
               animation: sec1Img 2.5s ease-in infinite;
+              width: max-width;
             }
             @keyframes sec1Img {
               0% {transform: translateY(0);}
@@ -210,7 +212,7 @@
       }
       // 섹션1 텍스트 슬라이드 애니메이션 구현
       @keyframes slide1 { 
-        from {left: -800px; opacity: 0;}
+        from {left: -1000px; opacity: 0;}
         to { left: calc(50% - 957px/2 ); opacity: 1;}
       }
       // 굳이 없어도 되긴함
@@ -648,7 +650,6 @@
             font-style: normal;
             font-weight: 200;
             font-size: 10.625rem;  //170px
-            display: flex;
             color: #DBB27A;
             .sec7_brace1 {
               position: absolute;
@@ -675,7 +676,7 @@
           }
           .contact {
             position: absolute;
-            left: calc(50% - 332px/2);
+            left: calc(50% - 332px/2); 
             bottom: 10px;
             font-family: 'Cormorant Garamond';
             font-style: italic;
@@ -711,8 +712,8 @@
     
     .section8 {
       background-color: #FFDA55;
-      .sec9_container {
-        .sec9_content {
+      .sec8_container {
+        .sec8_content {
           position: absolute;
           top: 360px;
           left: calc(50% - 450px/2); 
@@ -743,8 +744,8 @@
     }
     .section9 {
       background-color: #BCF8A7;
-      .sec10_container {
-        .sec10_content {
+      .sec9_container {
+        .sec9_content {
           position: absolute;
           top: 360px;
           left: calc(50% - 450px/2); 
@@ -772,8 +773,8 @@
       }
     }
     .section10 {
-      .sec11_container {
-        .sec11_content {
+      .sec10_container {
+        .sec10_content {
           position: absolute;
           top: 360px;
           left: calc(50% - 570px/2);
@@ -805,8 +806,8 @@
       }
     }
     .section11 {
-      .sec12_container {
-        .sec12_gap1 {
+      .sec11_container {
+        .sec11_gap1 {
           position: absolute;
           top: 0;
           left: 0;
@@ -818,42 +819,70 @@
             height: 423px;
           }
         }
-        .sec12_content {
+        .sec11_content {
           position: absolute;
           top: 330px; 
-          left: calc(50% - 596px/2);
-          // width: 560px;
-          // height: 250px;
-          p {
+          left: calc(50% - 780px/2);
+          width: 780px;
+          height: 300px;
+          .sec11_text {
             position: relative;
-            z-index: 3;
             color: #000;
             font-family: 'SUIT';
             font-style: normal;
             font-weight: 600;
             font-size: 5.625rem;  //90px
-            line-height: 125px;
-            text-align: center;
             line-height: 115px;
-
           }
-          .brush  {
-            display: inherit;
+          .sec11_text1 {
             position: relative;
-            img{
-              opacity: 0;
-              vertical-align: middle;
-              position: absolute;
-              left: -50px;
-              bottom: 0;
-              // animation: brush 1s ease .5s forwards;
-            }
+            text-align: center;
           }
-        }
-        .sec12_gap2 {
+          .sec11_wrap {
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 490px;
+            height: 160px;
+            font-family: 'Cormorant';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 10.3125rem;  //170px
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            color: #DBB27A;
+            // line-height: 230px;
+            .sec11_brace1 {
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+            .sec11_textBr {
+              position: relative;
+              z-index: 3;
+              color: #000;
+              font-family: 'SUIT';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 5.625rem;  //90px
+              text-align: center;
+              display: flex;
+            }
+            .sec11_brace2 {
+              position: absolute;
+              right: 0;
+              top: 0;
+            } 
+          }
+          .sec11_text2 {
+            text-align: right;
+            padding-top: 5px;
+          }
+        }  
+        .sec11_gap2 {
           position: absolute;
           top: 570px;
-          // right: 0;
           left: calc(50% - 423px/2 + 745px);
           width: 423px;
           height: 423px;
@@ -863,10 +892,6 @@
           }
         }
       }
-      // @keyframes brush {
-      //   from { opacity: 0.1; left: -150px;}
-      //   to { opacity: 1; left: -45px;}
-      // }
     }
 
 
@@ -877,7 +902,7 @@
       // width: 100%;
       // height: 100%;
       background-color: #000;
-      .sec13_container {
+      .sec12_container {
         .backgrond_img {
           position: absolute;
           top: 0;
@@ -911,7 +936,7 @@
               }
             }
           } 
-        .sec13_content {
+        .sec12_content {
           // display: inherit;
           // visibility: hidden;  // 이건 js에서 설정함
           opacity: 0;  // delay를 적용할땐 opacity:0 써줘야함

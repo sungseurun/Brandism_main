@@ -96,8 +96,8 @@ function sectionEvent(){
     if (wheelNumber==11 && wheelFlag =='up'){}
     else {
       section12Event();
-      section13Event();
-      section14Event();
+      // section13Event();
+      // section14Event();
     }
   } 
 
@@ -187,7 +187,6 @@ function section1Event(){
   let twiceScale = "";
   let threeScale = "";
 
-
   if(wheelFlag=='down'){  
     beforeScale = 'scale(1)' + 'translate(0)',
     onceScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
@@ -203,21 +202,19 @@ function section1Event(){
   }
 
   // if(wheelFlag=='down'){  
-  //   beforeScale = 'scale(1)' + 'translateY(0)',
-  //   onceScale  = 'scale(0.7)' + 'translate(0, -430px)',
-  //   twiceScale = 'scale(0.5)' + 'translate(0, -790px)',
-  //   threeScale = 'scale(0.35)' + 'translate(0, -1170px)',
-  //   afterScale = 'scale(0.2)' + 'translate(0, -1550px)'
-  // } 
-  // else {  
-  //   beforeScale = 'scale(0.2)' + 'translate(0, -1550px)',
-  //   onceScale  = 'scale(0.35)' + 'translateY(0, -1170px)',
-  //   twiceScale = 'scale(0.5)' + 'translateY(0, -790px)',
-  //   threeScale = 'scale(0.7)' + 'translateY(0, -430px)',
-  //   afterScale = 'scale(1)' + 'translateY(0)'
+  //   beforeScale = 'scale(1)' + 'translate(0)',
+  //   onceScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
+  //   twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
+  //   threeScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
+  //   afterScale = 'scale(0.2)' + 'translate(-300px, -1550px)'
+  // } else {  
+  //   beforeScale = 'scale(0.2)' + 'translate(-300px, -1550px)',
+  //   onceScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
+  //   twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
+  //   threeScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
+  //   afterScale = 'scale(1)' + 'translate(0)'
   // }
 
- // document.getElementById('sec1_scale');
   const element = document.getElementById('sec1_scale');
   
   element.animate (
@@ -302,7 +299,7 @@ function section3Event(){
 }
 function section4Event(){
 
-  const element1 = document.querySelector('.sec4_text1');
+  const element1 = document.getElementById('sec4_text1');
   element1.animate (
     [
       {opacity: 0, transform: 'translateX(32rem)'},
@@ -318,7 +315,7 @@ function section4Event(){
     }
   );
 
-  const element2 = document.querySelector('.sec4_text2');
+  const element2 = document.getElementById('sec4_text2');
   element2.animate (
     [
       {opacity: 0, transform: 'translateX(-32rem)'},
@@ -413,7 +410,6 @@ function section6Event(){
   element.animate (
     [
       {opacity: 0.},
-      {opacity: 0.1},
       {opacity: 1}
     ],
     {
@@ -544,11 +540,10 @@ function section7Event(){
     const elementE = document.getElementById('sec7_text');
     elementE.animate (
       [
-        {opacity: 0,},
         {opacity: 0 },
         {opacity: 0 },
         {opacity: 0.1 },
-        {opacity: 0.3 },
+        {opacity: 0.7 },
         {opacity: 1}
       ],
       {
@@ -577,42 +572,52 @@ function section7Event(){
           {backgroundColor:'#FFDA55'}
         ],
         {
-          duration: 2000,
+          duration: 1800,
           easing: 'ease-in-out',
           fill: 'forwards'
         }
       );
-    }, 2000);
+    }, 1800);
   
+    const element2 = document.getElementById('sec7_contact');
+    element2.animate (
+      {
+        transform: [
+          'translateX(0)',
+        ]
+      },
+      {
+        duration: 1000,
+        easing: 'ease-in-out',
+        fill: 'forwards'
+      }
+    );
     setTimeout(function(){
-      const element2 = document.getElementById('sec7_contact');
       element2.animate (
         {
           transform: [
-            'translateX(0)',
             'translateX(-115px)'
           ]
         },
         {
-          duration: 1500,
+          duration: 900,
           easing: 'ease-in-out',
           fill: 'forwards'
         }
       );
       console.log("contact 위치변경")
-    }, 2200);
+    }, 1800);
 
     const element3 = document.getElementById('sec7_object');
     element3.animate (
       [
         {opacity: 0 },
         {opacity: 0 },
-        {opacity: 0 },
         {opacity: 0.1 },
         {opacity: 1}
       ],
       {
-        duration: 4500,       // 밀리초지정
+        duration: 4000,       // 밀리초지정
         easing: 'ease-out',  // 가속도timing-function (서서히 종료)
         fill: 'forwards'    // 종료후 (유지)
       }
@@ -620,68 +625,6 @@ function section7Event(){
 
   console.log(sectionNum, '섹션7');
 }
-
-// 섹션7 배경이 흰색에서 노랑색으로 바뀌는 애니메이션 구현
-function section7_2Event(){
-
-  // // setTime으로 배경색변경이 리셋이 안되는 버그?가 생겨서 만들어줌  
-  // const elementA = document.getElementById('section7');
-  // elementA.animate (
-  //   [
-  //     {backgroundColor:'#fff'}
-  //   ],
-  //   {
-  //     duration: 0,
-  //     easing: 'ease-in-out',
-  //     fill: 'forwards'
-  //   }
-  // );
-  // setTimeout (function (){   // 딜레이 주기
-  //   elementA.animate (
-  //     [
-  //       {backgroundColor:'#FFDA55'}
-  //     ],
-  //     {
-  //       duration: 2000,
-  //       easing: 'ease-in-out',
-  //       fill: 'forwards'
-  //     }
-  //   );
-  // }, 2000);
-
-  // setTimeout(function(){
-  //   const elementD = document.getElementById('sec7_contact');
-  //   elementD.animate (
-  //     {
-  //       transform: [
-  //         'translateX(0)',
-  //         'translateX(-115px)'
-  //       ]
-  //     },
-  //     {
-  //       duration: 1500,
-  //       easing: 'ease-in-out',
-  //       fill: 'forwards'
-  //     }
-  //   );
-  //   console.log("contact 위치변경")
- 
-
-  //   const elementE = document.getElementById('sec7_object');
-  //   elementE.animate (
-  //     [
-  //       {opacity: 0 },
-  //       {opacity: 0.1 },
-  //       {opacity: 1}
-  //     ],
-  //     {
-  //       duration: 2500,       // 밀리초지정
-  //       easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-  //       fill: 'forwards'    // 종료후 (유지)
-  //     }
-  //   );
-  // }, 2200);
-};
 
 function section8Event(){
 
@@ -701,7 +644,7 @@ function section8Event(){
     }
   );
 
-const elementT = document.getElementById('sec9_img');
+const elementT = document.getElementById('sec8_img');
 elementT.animate (
   {
     transform: [
@@ -720,7 +663,7 @@ elementT.animate (
 
 function section9Event(){
 
-  const element = document.getElementById('sec10_img');
+  const element = document.getElementById('sec9_img');
   element.animate (
     {
       transform: [
@@ -740,7 +683,7 @@ function section9Event(){
 
 function section10Event(){
 
-  const element = document.getElementById('sec11_img1');
+  const element = document.getElementById('sec10_img1');
   element.animate (
     {
       transform: [
@@ -756,7 +699,7 @@ function section10Event(){
     }
   );
 
-  const elementE = document.getElementById('sec11_img2');
+  const elementE = document.getElementById('sec10_img2');
   elementE.animate (
     {
       transform: [
@@ -775,34 +718,21 @@ function section10Event(){
 
 function section11Event(){
 
-  const element = document.getElementById('brush');
-  element.animate (
-    [
-      {opacity: 0, transform: 'translateX(-150px)'},
-      {opacity: 1, transform: 'translateX(-10px)'}
-    ],
-    {
-      duration: 1500,
-      easing: 'ease',
-      fill: 'forwards'
-    }
-  )
-
-  
-  // 브랜디즘 밑줄 부분 이벤트 (아이디만 토글로 불러와서 css 적용 - setTimeout으로 딜레이 줌)
-  // let brush = document.getElementById('sec12_brush').classList.contains("brush");
-  
-  // if(!brush){
-  //   document.getElementById('sec12_brush').classList.toggle("brush");
-  // } else {
-  //   document.getElementById('sec12_brush').classList.toggle("brush");
-  //   setTimeout(function() {
-  //     document.getElementById('sec12_brush').classList.toggle("brush");  
-  //   }, 100);
-  // }
+  // const element = document.getElementById('brush');
+  // element.animate (
+  //   [
+  //     {opacity: 0, transform: 'translateX(-150px)'},
+  //     {opacity: 1, transform: 'translateX(-10px)'}
+  //   ],
+  //   {
+  //     duration: 1500,
+  //     easing: 'ease',
+  //     fill: 'forwards'
+  //   }
+  // );
   
   // 오브젝트 이미지 서서히 나타나기 이벤트
-    document.getElementById('sec12_img1').animate(
+    document.getElementById('sec11_img1').animate(
     [  // keyframes
       {opacity: 0},
       {opacity: 1}
@@ -813,8 +743,7 @@ function section11Event(){
       fill: 'forwards'    // 종료후 (유지)
     }
   );
-
-  document.getElementById('sec12_img2').animate(
+  document.getElementById('sec11_img2').animate(
     [ 
       {opacity: 0},
       {opacity: 1}
@@ -824,6 +753,50 @@ function section11Event(){
       fill: 'forwards'    // 종료후 (유지)
     }
   );
+
+  const elementA = document.getElementById('sec11_brace1');
+  elementA.animate (
+    [
+      {opacity: 0.8, transform: 'translateX(200px)'},
+      {opacity: 0.9 },
+      {opacity: 1, transform:'none'}
+    ],
+    {
+      duration: 1000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+  const elementB = document.getElementById('sec11_brace2');
+  elementB.animate (
+    [
+      {opacity: 0.8, transform: 'translateX(-200px)'},
+      {opacity: 0.9 },
+      {opacity: 1, transform:'none'}
+    ],
+    {
+      duration: 1000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
+  const elementE = document.getElementById('sec11_textBr');
+  elementE.animate (
+    [
+      {opacity: 0 },
+      {opacity: 0 },
+      {opacity: 0.1 },
+      {opacity: 0.7 },
+      {opacity: 1}
+    ],
+    {
+      duration: 2000,       // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'    // 종료후 (유지)
+    }
+  );
+
 }
 
 // 푸터 로고이미지
@@ -831,7 +804,6 @@ function section12Event(){
 
   // 로고이미지 3배 비율로 커지기
   const scaleResize = document.getElementById('logo');
-
   scaleResize.animate(
     {
       transform: [    // 크기 이벤트 + 세로 높이값 이벤트
@@ -846,6 +818,32 @@ function section12Event(){
     }
   );
 
+  // 푸터 number 이미지
+  let keyframes1 = [
+    {opacity: 0},
+    {opacity: 1}
+  ];
+  let options1 = {
+      duration: 2000,          // 밀리초지정
+      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'       // 종료후 (유지)
+  };  
+  document.getElementById('number').animate(keyframes1, options1);
+
+  // 푸터 content 텍스트
+  let keyframes2 = [
+    {opacity: 0},
+    {opacity: 0.4}, 
+    {opacity: 1}
+  ];
+  let options2 = {
+    // delay: 3000, // delay는 오류가 좀 있음,,
+      duration: 2000,          // 밀리초지정
+      easing: 'ease-in-out',  // 가속도timing-function (서서히 종료)
+      fill: 'forwards'       // 종료후 (유지)
+  };  
+  document.getElementById('sec12_content').animate(keyframes2, options2);
+
   // console.log(wheelFlag);
   // console.log('scale' + beforeScale);
   // console.log('scale' + afterScale);
@@ -854,43 +852,3 @@ function section12Event(){
   // console.log('translateY' + beforeTranslateY);
   // console.log('translateY' + afterTranslateY);
 }
-
-
-// 푸터 number 이미지
-function section13Event(){
-
-  let keyframes1 = [
-    {opacity: 0},
-    {opacity: 0.3},
-    {opacity: 1}
-  ];
-  let options1 = {
-      duration: 2000,     // 밀리초지정
-      easing: 'ease-out', // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
-  };  
-  document.getElementById('number').animate(keyframes1, options1);
-
-}
-
-// 푸터 content 텍스트
-function section14Event(){
-
-  let keyframes2 = [
-    {opacity: 0},
-    {opacity: 0},
-    {opacity: 0.3},
-    {opacity: 1}
-  ];
-  let options2 = {
-    // delay: 3000, // delay는 오류가 좀 있음,,
-      duration: 3000,     // 밀리초지정
-      easing: 'ease-out', // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
-  };  
-  document.getElementById('sec13_content').animate(keyframes2, options2);
-}
-
-
-
-
