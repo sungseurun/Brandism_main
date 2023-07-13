@@ -83,6 +83,9 @@
       width: 100%;
       height: 100%;
       margin: 0 auto;
+      display: flex; /**//**//**//**/
+      justify-content: center; /**//**//**/
+      align-items: center;/**//**//**/
       overflow-x: hidden;  // 슬라이드 가로스크롤 안보이게!
       overflow-y: hidden;
     //   -webkit-overflow-style: none;
@@ -286,8 +289,8 @@
       .sec3_container {
         .sec3_content {
           position: absolute;
-          // top: 180px; 
-          top: calc(50% - 600px/2 + 480px);
+          top: 180px; 
+          // top: calc(50% - 600px/2 + 480px);
           left: calc(50% - 413px/2 - 400px);
           width: 1200px;
           height: 600px; 

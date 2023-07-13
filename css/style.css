@@ -73,6 +73,9 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  display: flex; /**/ /**/ /**/ /**/
+  justify-content: center; /**/ /**/ /**/
+  align-items: center; /**/ /**/ /**/
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -301,7 +304,7 @@
 }
 #wrap #main .section3 .sec3_container .sec3_content {
   position: absolute;
-  top: calc(50% - 300px + 480px);
+  top: 180px;
   left: calc(50% - 206.5px - 400px);
   width: 1200px;
   height: 600px;
