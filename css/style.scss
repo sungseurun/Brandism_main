@@ -138,10 +138,10 @@
             }
             .sec1_img1 {
               position: absolute;
-              left: calc(50% - 332px/2 + 80px);  //left: 315px;
+              left: calc(50% - 265px/2 + 80px);  //left: 315px;
               top: 20px;  
               animation: sec1Img 2.5s ease-in infinite;
-              width: max-width;
+              width: 33%;
             }
             @keyframes sec1Img {
               0% {transform: translateY(0);}
@@ -189,8 +189,9 @@
             }
             .sec1_img2 {
               position: absolute;
-              left: calc(50% - 123px/2 + 155px);
+              left: calc(50% - 145px/2 + 170px);
               top: 75px;
+              // width: 8%;
               animation: sec1Img2 4s ease-in-out infinite;
             }
             // 브랜디즘 스튜디오 사이의 별 애니메이션
@@ -466,10 +467,22 @@
   
     .section5 {
       .sec5_container {
-        .background_img {
+        .background_img1 {
           position: absolute;
           top: 100px;
-          left: calc(50% - 390px/2 - 770px); 
+          left: calc(-12%);
+          // left: calc(50% - 390px/2 - 770px); 
+          img {
+            width: 130%;
+          }
+        }
+        .background_img2 {
+          position: absolute;
+          top: 100px;
+          left: calc(-20%); 
+          img {
+            width: 100%;
+          }
         }
         .sec5_content {
           position: absolute;
@@ -813,14 +826,11 @@
       .sec11_container {
         .sec11_gap1 {
           position: absolute;
-          top: 0;
-          left: 0;
-          left: calc(50% - 423px - 530px);
-          width: 423px;
-          height: 423px;
+          top: -10%;
+          left: -2%;
           > img {
-            width: 423px;
-            height: 423px;
+          // width: 423px;
+          // height: 423px;
           }
         }
         .sec11_content {
@@ -886,13 +896,11 @@
         }  
         .sec11_gap2 {
           position: absolute;
-          top: 570px;
+          top: 55%;    //570px;
           left: calc(50% - 423px/2 + 745px);
-          width: 423px;
-          height: 423px;
           > img {
-            width: 423px;
-            height: 423px;
+            // width: 423px;
+            // height: 423px;
           }
         }
       }
@@ -908,9 +916,12 @@
       background-color: #000;
       .sec12_container {
         .backgrond_img {
-          position: absolute;
-          top: 0;
-          left: calc(50% - 814px/2 + 540px);
+          img {
+            position: absolute;
+            top: -400px;
+            left: calc(60%);
+            // width: 100%;
+          }
         }
         .logo {
           position: absolute;
@@ -936,7 +947,7 @@
               cursor: pointer;
               img{
                 float: right;
-                width: 80%;
+                width: 85%;
               }
             }
           } 
@@ -945,8 +956,7 @@
           // visibility: hidden;  // 이건 js에서 설정함
           opacity: 0;  // delay를 적용할땐 opacity:0 써줘야함
           position: absolute;
-          top: 280px;  
-          float: left;
+          top: 290px;  
           left: calc(50% - 879px/2 - 430px);
           width: 880px;
           // height: 610px;
@@ -961,7 +971,7 @@
               text-decoration-thickness: 2px;   // 선 두께
               text-underline-position: under;
               // text-underline-offset: 1px;
-              line-height: 73px;
+              line-height: 74px;
             }
           }
           .bottom {
@@ -970,17 +980,17 @@
             font-style: normal;
             padding-top: 50px;
             .address {
-              padding-bottom: 20px;
+              padding-bottom: 30px;
               h3{
                 font-size: 1.875rem;  //30px
                 font-weight: 600;
-                line-height: 37.8px;
+                line-height: 38px;
               }
               h4{
                 font-family: 'SUIT';
                 font-weight: 300;
                 font-size: 1.1rem;
-                line-height: 26px;
+                line-height: 28px;
               }
             }
             .mail {
@@ -988,7 +998,7 @@
               h3{                
                 font-size: 1.875rem;  //30px
                 font-weight: 600;
-                line-height: 37.8px;
+                line-height: 38px;
               }
               h4{
                 font-family: 'SUIT';

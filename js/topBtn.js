@@ -33,7 +33,7 @@ let Top = document.getElementById('topBtn');
 // visivility: hidden;
 
 Top.addEventListener('click', function(e){
-  location.href = "index.himl";
+  location.href = "index.html/#section1";
   e.preventDefault();
   window.onwheel({ visivility:visible, });
 });

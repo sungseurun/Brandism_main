@@ -12,6 +12,7 @@ let sectionNum = 1;        // 섹션 번호
 let wheelNumber = 0;       // 섹션에서의 휠 횟수
 let wheelFlag="";          // 휠 업·다운
 let beforeWheelNumber = 0; // 이전 휠 번호
+// let onClick = "";
 
 let timeout;  // 휠 이벤트 시간제한 두기
 
@@ -51,6 +52,8 @@ window.addEventListener('wheel', function (e) {
 
 // 섹션에 이벤트 주기 ( 휠 횟수, 휠 업·다운)
 function sectionEvent(){
+
+  let onClick = document.getElementById('topBtn');
 
   // 휠횟수에 따른 event 속성 
   if(wheelNumber >= 0 && wheelNumber < 2 ){    // 휠횟수가 0~1 일 때 작동
@@ -162,6 +165,11 @@ function sectionEvent(){
   // }
   // else if (wheelNumber >= 18 && wheelNumber < 19) {  // sec13_content 휠 18에 나오게 하기
   //   document.getElementById( 'sec13_content').style.visibility = 'visible';
+  // }
+
+  // if (wheelNumber >= 1 && wheelNumber < 2 && onClick ){
+  //   allSectionNone();
+  //   document.getElementById( 'section1' ).style.visibility = 'visible';
   // }
 
 }
