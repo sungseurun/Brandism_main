@@ -12,6 +12,45 @@ window.onwheel = function(){
 };
 
 
+
+// 구글에서 찾은거 활용--->>
+
+window.addEventListener('wheel', function (e) {
+
+  window.onwheel = function(){
+
+    clearTimeout(timeout);  // 이전 휠 이벤트 제거
+
+    timeout = setTimeout(function(){  // 다시 휠 이벤트 발생
+      if( e.deltaY > 1 ){
+        wheelNumber++;
+        beforeWheelNumber = wheelNumber-1;  
+        wheelFlag = 'down';
+      } else {
+        if (wheelNumber > 0) {
+          wheelNumber--;
+          wheelFlag = 'up';
+        } else {
+          return false;
+        }
+        beforeWheelNumber = wheelNumber+1;
+      }
+
+      sectionEvent();  // 각 섹션들이 이벤트 작동되도록.
+      
+      console.log("beforeWheelNumber:" + beforeWheelNumber);
+      console.log("wheelNumber:" + wheelNumber);
+  
+    },100);  // 0.1초 후
+  };
+});
+
+      // Test. 브라우저에서 휠 횟수 볼 수 있게함 ( 추후 삭제 )
+      // document.getElementById( 'wheelNumberPrint' ).value = wheelNumber;
+      // document.getElementById( 'wheelNumberPrint2' ).value = wheelNumber;
+      // document.getElementById( 'wheelNumberPrint3' ).value = wheelNumber;
+
+
 // 전체 디스플레이(전체 섹션) none 하기
 function allSectionNone(){
   for( let i=1; i<14; i++ ){
@@ -113,8 +152,37 @@ function section1Event(){
   console.log(afterTranslate); 
 }
 
+function section11Event() {
+
+  // 브랜디즘 밑줄 부분 이벤트 ( 아이디만 토글로 불러와서 css 적용 - setTimeout으로 딜레이 줌 )
+  let brush = document.getElementById('sec12_brush').classList.contains("brush");
+  
+  if(!brush){
+    document.getElementById('sec12_brush').classList.toggle("brush");
+  } else {
+    document.getElementById('sec12_brush').classList.toggle("brush");
+    setTimeout(function() {
+      document.getElementById('sec12_brush').classList.toggle("brush");  
+    }, 100);
+  }
+
+  // 브러쉬 이미지를 슬라이드 느낌으로
+  const element = document.getElementById('brush');
+  element.animate (
+    [
+      {opacity: 0, transform: 'translateX(-150px)'},
+      {opacity: 1, transform: 'translateX(-10px)'}
+    ],
+    {
+      duration: 1500,
+      easing: 'ease',
+      fill: 'forwards'
+    }
+  );
+};
+
 // 푸터 로고이미지
-function section13Event(){
+function section12Event(){
 
   // 휠넘버와 휠프래그에 맞춰 로고이미지 3배 비율로 커지기
   const scaleResize = document.getElementById('logo');
@@ -169,17 +237,3 @@ function section13Event(){
   // console.log('translateY' + beforeTranslateY);
   // console.log('translateY' + afterTranslateY);
 }
-
-function section12Event() {
-  // 브랜디즘 밑줄 부분 이벤트 (아이디만 토글로 불러와서 css 적용 - setTimeout으로 딜레이 줌)
-  let brush = document.getElementById('sec12_brush').classList.contains("brush");
-  
-  if(!brush){
-    document.getElementById('sec12_brush').classList.toggle("brush");
-  } else {
-    document.getElementById('sec12_brush').classList.toggle("brush");
-    setTimeout(function() {
-      document.getElementById('sec12_brush').classList.toggle("brush");  
-    }, 100);
-  }
-};

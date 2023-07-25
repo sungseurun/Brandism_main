@@ -3,13 +3,12 @@
 document.addEventListener("DOMContentLoaded", function(){
   allSectionNone(); 
   singleSectionDisplay( '1' );  // 1개만 보이게 한다
-  // setTimeout();
 });
 
 /////// 한 페이지에서 섹션 12개가 생성되는 자바스크립트 ///////
 
-let sectionNum = 1;        // 섹션 번호
-let wheelNumber = 0;       // 섹션에서의 휠 횟수
+let sectionNum = 1;        // 섹션 넘버
+let wheelNumber = 0;       // 섹션 휠넘버 
 let wheelFlag="";          // 휠 업·다운
 let beforeWheelNumber = 0; // 이전 휠 번호
 // let onClick = "";
@@ -18,13 +17,17 @@ let timeout;  // 휠 이벤트 시간제한 두기
 
 window.addEventListener('wheel', function (e) {
 
-  clearTimeout(timeout);  // 이전 휠 이벤트 제거
-
   window.onwheel = function(){
+
+    clearTimeout(timeout);  // 이전 휠 이벤트 제거
+
+    // wheelNumber에 따라 wheelTimeout 다르게 주기 이벤트
+    let wheelTimeout = [300,700,300,1000,1500,300,2200,300,300,300,1000];  //wheelNumber 1 ~ 11
+
     timeout = setTimeout(function(){  // 다시 휠 이벤트 발생
       if( e.deltaY > 1 ){
         wheelNumber++;
-        beforeWheelNumber = wheelNumber-1;
+        beforeWheelNumber = wheelNumber-1;  
         wheelFlag = 'down';
       } else {
         if (wheelNumber > 0) {
@@ -36,18 +39,15 @@ window.addEventListener('wheel', function (e) {
         beforeWheelNumber = wheelNumber+1;
       }
 
-      sectionEvent();  // 각 섹션들이 이벤트 작동되도록.
-      
       console.log("beforeWheelNumber:" + beforeWheelNumber);
       console.log("wheelNumber:" + wheelNumber);
-    
-      // Test. 브라우저에서 휠 횟수 볼 수 있게함 ( 추후 삭제 )
-      // document.getElementById( 'wheelNumberPrint' ).value = wheelNumber;
-      // document.getElementById( 'wheelNumberPrint2' ).value = wheelNumber;
-      // document.getElementById( 'wheelNumberPrint3' ).value = wheelNumber;
-    },100);  // 0.1초 후
+
+    return sectionEvent();  // 각 섹션들이 이벤트 작동되도록.
+
+    },wheelTimeout[wheelNumber]);
+
   };
-})
+});
 
 
 // 섹션에 이벤트 주기 ( 휠 횟수, 휠 업·다운)
@@ -99,8 +99,6 @@ function sectionEvent(){
     if (wheelNumber==11 && wheelFlag =='up'){}
     else {
       section12Event();
-      // section13Event();
-      // section14Event();
     }
   } 
 
@@ -136,7 +134,6 @@ function sectionEvent(){
   else if (wheelNumber >= 7 && wheelNumber < 8){  
     allSectionNone();
     document.getElementById( 'section8' ).style.visibility = 'visible';
-    // document.getElementById( 'header' ).style.visibility = 'visible'; // 헤더 다시 보이게 
   }
   else if (wheelNumber >= 8 && wheelNumber < 9){
     allSectionNone();
@@ -154,35 +151,20 @@ function sectionEvent(){
   else if (wheelNumber >= 11 && wheelNumber < 12){ 
     allSectionNone();
     document.getElementById( 'section12' ).style.visibility = 'visible';
-    document.getElementById( 'header' ).style.visibility = 'hidden'; // 섹션13 헤더 안보이게
-    // document.getElementById('number').style.visibility = 'visible';
-    // document.getElementById( 'sec13_content').style.visibility = 'visible';
+    document.getElementById( 'header' ).style.visibility = 'hidden'; // 섹션12 헤더 안보이게
   }
 
-  // else if (wheelNumber >= 13 && wheelNumber < 14) {  // sec13-number 휠 17에 나오게 하기
-  //   document.getElementById('number').style.visibility = 'visible';
-  //   document.getElementById( 'sec13_content' ).style.visibility = 'hidden';
-  // }
-  // else if (wheelNumber >= 18 && wheelNumber < 19) {  // sec13_content 휠 18에 나오게 하기
-  //   document.getElementById( 'sec13_content').style.visibility = 'visible';
-  // }
+};
 
-  // if (wheelNumber >= 1 && wheelNumber < 2 && onClick ){
-  //   allSectionNone();
-  //   document.getElementById( 'section1' ).style.visibility = 'visible';
-  // }
-
-}
-
-// 전체 디스플레이(전체 섹션) none 하기
+// 전체 디스플레이(전체 섹션) none / hidden 하기
 function allSectionNone(){
-  for( let i=1; i<13; i++ ){
+  for( let i = 1; i < 13; i++ ){
     document.querySelector( '.section' + i ).style.visibility = 'hidden';  
   }
 } 
 
 // 한개의 섹션 display inline 속성 불러서 보이게하기
-function singleSectionDisplay( num ){  // 변수 선언함  ----> ErrorErrorError
+function singleSectionDisplay( num ){ 
   document.querySelector( '.section'+ num ).style.visibility = 'visible';
 }
 
@@ -241,14 +223,12 @@ function section1Event(){
     fill: 'forwards'        // 종료후 (유지)
   }
 );
-
-  console.log(wheelFlag);
+  // console.log(wheelFlag);
+  console.log(sectionNum, '섹션1');
 }
 
 // 섹션 2에 이벤트 넣기
 function section2Event(){
-
-  // document.getElementById('sec2_fade').style.animationDelay = "1.5s";
 
   const element = document.getElementById('sec2_fade');
 
@@ -262,27 +242,26 @@ function section2Event(){
       {opacity: 1, transform: 'none'}
     ],
     {
-      // delay: 1,
-      duration: 2000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 2000,       
+      easing: 'ease-out', 
+      fill: 'forwards'  
     }
   );
-
+  console.log(sectionNum, '섹션2');
 }
 
 function section3Event(){
 
-  const element1 = document.querySelector('#section3');
+  const element1 = document.getElementById('section3');
   element1.animate (
     [
       {opacity: 0},
       {opacity: 1}
     ],
     {
-      duration: 1500,          // 밀리초지정
-      easing: 'ease-in-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'       // 종료후 (유지)
+      duration: 1500,          
+      easing: 'ease-in-out', 
+      fill: 'forwards'     
     }
   );
 
@@ -297,12 +276,12 @@ function section3Event(){
       ]
     },
     {
-      duration: 2500,            // 밀리초 지정
-      iterations: Infinity,     // 반복 횟수 (계속)
-      easing: 'ease-in',       // 가속도timing-function (서서히시작 서서히종료)
+      duration: 2500,            
+      iterations: Infinity,   // 반복 횟수 (계속)
+      easing: 'ease-in',       
     }
   );
-  // console.log(sectionNum, '섹션3');
+  console.log(sectionNum, '섹션3');
 
 }
 function section4Event(){
@@ -317,9 +296,9 @@ function section4Event(){
       {opacity: 1, transform:'none'}
     ],
     {
-      duration: 1500,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1500,     
+      easing: 'ease-out',  
+      fill: 'forwards'  
     }
   );
 
@@ -333,12 +312,12 @@ function section4Event(){
       {opacity: 1, transform:'none'}
     ],
     {
-      duration: 1500,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1500,      
+      easing: 'ease-out',  
+      fill: 'forwards' 
     }
   );
-  //console.log(sectionNum, '섹션4');
+  console.log(sectionNum, '섹션4');
 }
 
 function section5Event(){ 
@@ -354,9 +333,9 @@ function section5Event(){
       ]
     },
     {
-      duration: 3000,              // 밀리초 지정
-      iterations: Infinity,       // 반복 횟수 (계속)
-      easing: 'ease-in-out',     // 가속도timing-function (서서히시작 서서히종료)
+      duration: 3000,
+      iterations: Infinity,
+      easing: 'ease-in-out',     
     }
   );
 
@@ -372,9 +351,9 @@ function section5Event(){
       ]
     },
     {
-      duration: 3500,            // 밀리초 지정
-      iterations: Infinity,      // 반복 횟수 (계속)
-      easing: 'ease-in-out',     // 가속도timing-function (서서히시작 서서히종료)
+      duration: 3500,            
+      iterations: Infinity,      
+      easing: 'ease-in-out',
     }
   );
 
@@ -387,9 +366,9 @@ function section5Event(){
       {opacity: 1, transform: 'none'}
     ],
     {
-      duration: 1500,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1500, 
+      easing: 'ease-out',  
+      fill: 'forwards'  
     }
   );
 
@@ -403,9 +382,9 @@ function section5Event(){
       {opacity: 1, transform: 'none'}
     ],
     {
-      duration: 2500,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 2500,  
+      easing: 'ease-out',
+      fill: 'forwards'   
     }
   );
 
@@ -414,16 +393,16 @@ function section5Event(){
 
 function section6Event(){
 
-  const element = document.querySelector('#section6');
+  const element = document.getElementById('section6');
   element.animate (
     [
       {opacity: 0.},
       {opacity: 1}
     ],
     {
-      duration: 2000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 2000, 
+      easing: 'ease-out',  
+      fill: 'forwards'  
     }
   );
 
@@ -438,14 +417,14 @@ function section6Event(){
       ]
     },
     {
-      duration: 2500,             // 밀리초 지정
-      iterations: Infinity,      // 반복 횟수 (계속)
-      direction: 'alternate',   // 반복 작업 방식
-      easing: 'ease-in',       // 가속도timing-function (서서히시작 서서히종료)
+      duration: 2500,            
+      iterations: Infinity,      
+      direction: 'alternate',  
+      easing: 'ease-in',  
     }
   );
 
-  //console.log(sectionNum, '섹션6');
+  console.log(sectionNum, '섹션6');
   }
 
 
@@ -461,9 +440,9 @@ function section7Event(){
       ]
     },
     {
-      duration: 1000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1000,   
+      easing: 'ease-out', 
+      fill: 'forwards'  
     }
   );
 
@@ -477,9 +456,9 @@ function section7Event(){
       ]
     },
     {
-      duration: 1000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1000,
+      easing: 'ease-out', 
+      fill: 'forwards'   
     }
   );
 
@@ -494,9 +473,9 @@ function section7Event(){
       {opacity: 1, transform:'none', color:'#DBB27A'}
     ],
     {
-      duration: 1500,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1500, 
+      easing: 'ease-out', 
+      fill: 'forwards' 
     }
   );
   setTimeout (function (){
@@ -524,9 +503,9 @@ function section7Event(){
       {opacity: 1, transform:'none', color:'#DBB27A'}
     ],
     {
-      duration: 1500,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1500, 
+      easing: 'ease-out',
+      fill: 'forwards'
     }
   );
   setTimeout (function (){
@@ -555,9 +534,9 @@ function section7Event(){
         {opacity: 1}
       ],
       {
-        duration: 3500,       // 밀리초지정
-        easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-        fill: 'forwards'    // 종료후 (유지)
+        duration: 3500,   
+        easing: 'ease-out', 
+        fill: 'forwards'   
       }
     );
   // }, 2000);
@@ -613,7 +592,7 @@ function section7Event(){
           fill: 'forwards'
         }
       );
-      console.log("contact 위치변경")
+      // console.log("contact 위치변경")
     }, 1800);
 
     const element3 = document.getElementById('sec7_object');
@@ -625,9 +604,9 @@ function section7Event(){
         {opacity: 1}
       ],
       {
-        duration: 4000,       // 밀리초지정
-        easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-        fill: 'forwards'    // 종료후 (유지)
+        duration: 4000,    
+        easing: 'ease-out',
+        fill: 'forwards'  
       }
     );
 
@@ -646,27 +625,28 @@ function section8Event(){
       ]
     },
     {
-      duration: 3000,            // 밀리초 지정
-      direction: 'alternate',   // 반복 작업 방식
-      easing: 'ease-in',     // 가속도timing-function (서서히시작 서서히종료)
+      duration: 3000,        
+      direction: 'alternate', 
+      easing: 'ease-in',
     }
   );
 
-const elementT = document.getElementById('sec8_img');
-elementT.animate (
-  {
-    transform: [
-      'translate(-150px, -90px)', 
-      'translate(-100px, -70px)',
-      'translate(-40px, -30px)',
-      'translate(0)'
-    ]
-  },
-  {
-    duration: 1000,    // 밀리초 지정
-    easing: 'ease'    // 가속도 종료
-  }
-);
+  const elementT = document.getElementById('sec8_img');
+  elementT.animate (
+    {
+      transform: [
+        'translate(-150px, -90px)', 
+        'translate(-100px, -70px)',
+        'translate(-40px, -30px)',
+        'translate(0)'
+      ]
+    },
+    {
+      duration: 1000,  
+      easing: 'ease'
+    }
+  );
+  console.log(sectionNum,'섹션8');
 }
 
 function section9Event(){
@@ -682,11 +662,11 @@ function section9Event(){
       ]
     },
     {
-      duration: 1000,    // 밀리초 지정
-      easing: 'ease'    // 가속도 종료
+      duration: 1000, 
+      easing: 'ease' 
     }
   );
-  //console.log(sectionNum);
+  console.log(sectionNum,'섹션9');
 }
 
 function section10Event(){
@@ -702,8 +682,8 @@ function section10Event(){
       ]
     },
     {
-      duration: 1000,    // 밀리초 지정
-      easing: 'ease'    // 가속도 종료
+      duration: 1000,  
+      easing: 'ease'  
     }
   );
 
@@ -718,26 +698,14 @@ function section10Event(){
       ]
     },
     {
-      duration: 1000,      // 밀리초 지정
-      easing: 'ease'      // 가속도 종료
+      duration: 1000,
+      easing: 'ease' 
     }
   );
+  console.log(sectionNum,'섹션10');
 }
 
 function section11Event(){
-
-  // const element = document.getElementById('brush');
-  // element.animate (
-  //   [
-  //     {opacity: 0, transform: 'translateX(-150px)'},
-  //     {opacity: 1, transform: 'translateX(-10px)'}
-  //   ],
-  //   {
-  //     duration: 1500,
-  //     easing: 'ease',
-  //     fill: 'forwards'
-  //   }
-  // );
   
   // 오브젝트 이미지 서서히 나타나기 이벤트
     document.getElementById('sec11_img1').animate(
@@ -746,9 +714,9 @@ function section11Event(){
       {opacity: 1}
     ],
     {  // options
-      duration: 2000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 2000,       
+      easing: 'ease-out',  
+      fill: 'forwards' 
     }
   );
   document.getElementById('sec11_img2').animate(
@@ -756,9 +724,9 @@ function section11Event(){
       {opacity: 0},
       {opacity: 1}
     ],{ 
-      duration: 2000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 2000,       
+      easing: 'ease-out',  
+      fill: 'forwards' 
     }
   );
 
@@ -770,9 +738,9 @@ function section11Event(){
       {opacity: 1, transform:'none'}
     ],
     {
-      duration: 1000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1000,      
+      easing: 'ease-out', 
+      fill: 'forwards'  
     }
   );
   const elementB = document.getElementById('sec11_brace2');
@@ -783,9 +751,9 @@ function section11Event(){
       {opacity: 1, transform:'none'}
     ],
     {
-      duration: 1000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 1000,      
+      easing: 'ease-out', 
+      fill: 'forwards' 
     }
   );
 
@@ -799,12 +767,12 @@ function section11Event(){
       {opacity: 1}
     ],
     {
-      duration: 2000,       // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'    // 종료후 (유지)
+      duration: 2000,   
+      easing: 'ease-out',  
+      fill: 'forwards'
     }
   );
-
+  console.log(sectionNum,'섹션11');
 }
 
 // 푸터 로고이미지
@@ -814,15 +782,15 @@ function section12Event(){
   const scaleResize = document.getElementById('logo');
   scaleResize.animate(
     {
-      transform: [    // 크기 이벤트 + 세로 높이값 이벤트
+      transform: [    // 크기 이벤트 + 위치값 이벤트
       'scale(1)' + 'translate(0)',
       'scale(2.8)' + 'translate(90px, 17px)'
      ] 
     },
     {
-      duration: 1500,         // 밀리초 지정 1초
-      easing: 'ease',        // 가속도 종류
-      fill: 'forwards',     // 종료 시 속성 값 (계속 유지)
+      duration: 1500,  
+      easing: 'ease',    
+      fill: 'forwards',  
     }
   );
 
@@ -832,11 +800,12 @@ function section12Event(){
     {opacity: 1}
   ];
   let options1 = {
-      duration: 2000,          // 밀리초지정
-      easing: 'ease-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'       // 종료후 (유지)
+      duration: 2000,  
+      easing: 'ease-out',  
+      fill: 'forwards'  
   };  
   document.getElementById('number').animate(keyframes1, options1);
+
 
   // 푸터 content 텍스트
   let keyframes2 = [
@@ -846,17 +815,10 @@ function section12Event(){
   ];
   let options2 = {
     // delay: 3000, // delay는 오류가 좀 있음,,
-      duration: 2000,          // 밀리초지정
-      easing: 'ease-in-out',  // 가속도timing-function (서서히 종료)
-      fill: 'forwards'       // 종료후 (유지)
+      duration: 2000,   
+      easing: 'ease-in-out', 
+      fill: 'forwards' 
   };  
   document.getElementById('sec12_content').animate(keyframes2, options2);
 
-  // console.log(wheelFlag);
-  // console.log('scale' + beforeScale);
-  // console.log('scale' + afterScale);
-  // console.log('translateX' + beforeTranslateX);
-  // console.log('translateX' + afterTranslateX);
-  // console.log('translateY' + beforeTranslateY);
-  // console.log('translateY' + afterTranslateY);
 }
