@@ -786,10 +786,10 @@
         .sec8_content {
           position: absolute;
           top: 360px;
-          left: calc(50% - 450px/2); 
+          left: calc(50% - 630px/2); 
           display: flex;
-          width: 450px;
-          height: 190px;
+          width: 610px;
+          height: 246px;
           color: #000;
           text-align: center;
           justify-content: center;
@@ -797,17 +797,40 @@
           h3 {
             position: absolute;
             left: 0;
-            top: 54px;
+            top: 38%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: 'SUIT';
             font-style: normal;
             font-weight: 500;
             font-size: 3.75rem;   //60px;
             // line-height: 88px;
           }
-          img {
+          .sec8_img_content {}
+          .sec8_img1 {
             position: absolute;
-            left: calc(50% - 200px/2 + 135px);  //left: 260px;
-            top: -25px;
+            left: calc(50% - 365px/2 + 60px);  //left: 260px;
+            top: -95px;
+            img {
+              width: 100%;
+            }
+          }
+          .sec8_img2 {
+            position: absolute;
+            left: calc(50% - 365px/2 + 20px);  //left: 260px;
+            top: -120px;
+            img {
+              width: 100%;
+            }
+          }
+          .sec8_img3 {
+            position: absolute;
+            left: calc(50% - 365px/2 + 20px);  //left: 260px;
+            top: -105px;
+            img {
+              width: 95%;
+            }
           }
         }
       }

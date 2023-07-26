@@ -629,37 +629,22 @@ function section7Event(){
 
 function section8Event(){
 
-  const elementb = document.getElementById('section8');
-  elementb.animate (
-    {
-      transform: [
-        'translateY(1080px,)', 
-        'translateY(100px,)',
-        'translateY(0)'
-      ]
-    },
-    {
-      duration: 3000,        
-      direction: 'alternate', 
-      easing: 'ease-in',
-    }
-  );
-
-  const elementT = document.getElementById('sec8_img');
-  elementT.animate (
-    {
-      transform: [
-        'translate(-150px, -90px)', 
-        'translate(-100px, -70px)',
-        'translate(-40px, -30px)',
-        'translate(0)'
-      ]
-    },
-    {
-      duration: 1000,  
-      easing: 'ease'
-    }
-  );
+  // const elementT = document.getElementById('sec8_img');
+  // elementT.animate (
+  //   {
+  //     transform: [
+  //       'translate(-150px, -90px)', 
+  //       'translate(-100px, -70px)',
+  //       'translate(-40px, -30px)',
+  //       'translate(0)'
+  //     ]
+  //   },
+  //   {
+  //     duration: 1000,  
+  //     easing: 'ease'
+  //   }
+  // );
+  
   console.log(sectionNum,'섹션8');
 }
 

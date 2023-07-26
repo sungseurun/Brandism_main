@@ -747,10 +747,10 @@
 #wrap .section8 .sec8_container .sec8_content {
   position: absolute;
   top: 360px;
-  left: calc(50% - 225px);
+  left: calc(50% - 315px);
   display: flex;
-  width: 450px;
-  height: 190px;
+  width: 610px;
+  height: 246px;
   color: #000;
   text-align: center;
   justify-content: center;
@@ -759,16 +759,38 @@
 #wrap .section8 .sec8_container .sec8_content h3 {
   position: absolute;
   left: 0;
-  top: 54px;
+  top: 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
   font-size: 3.75rem;
 }
-#wrap .section8 .sec8_container .sec8_content img {
+#wrap .section8 .sec8_container .sec8_content .sec8_img1 {
   position: absolute;
-  left: calc(50% - 100px + 135px);
-  top: -25px;
+  left: calc(50% - 182.5px + 60px);
+  top: -95px;
+}
+#wrap .section8 .sec8_container .sec8_content .sec8_img1 img {
+  width: 100%;
+}
+#wrap .section8 .sec8_container .sec8_content .sec8_img2 {
+  position: absolute;
+  left: calc(50% - 182.5px + 20px);
+  top: -120px;
+}
+#wrap .section8 .sec8_container .sec8_content .sec8_img2 img {
+  width: 100%;
+}
+#wrap .section8 .sec8_container .sec8_content .sec8_img3 {
+  position: absolute;
+  left: calc(50% - 182.5px + 20px);
+  top: -105px;
+}
+#wrap .section8 .sec8_container .sec8_content .sec8_img3 img {
+  width: 95%;
 }
 #wrap .section9 {
   background-color: #BCF8A7;
