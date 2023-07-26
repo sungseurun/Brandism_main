@@ -45,6 +45,41 @@ window.addEventListener('wheel', function (e) {
   };
 });
 
+// 섹션마다 마우스휠 넘기는 시간 다르게 주기 
+window.addEventListener('wheel', function (e) {
+
+  window.onwheel = function(){
+
+    clearTimeout(timeout);  // 이전 휠 이벤트 제거
+
+    // wheelNumber에 따라 wheelTimeout 다르게 주기 이벤트
+    let wheelTimeout = [300,700,300,1000,1500,300,2200,300,300,300,1000];  //wheelNumber 1 ~ 11
+
+    timeout = setTimeout(function(){  // 다시 휠 이벤트 발생
+      if( e.deltaY > 1 ){
+        wheelNumber++;
+        beforeWheelNumber = wheelNumber-1;  
+        wheelFlag = 'down';
+      } else {
+        if (wheelNumber > 0) {
+          wheelNumber--;
+          wheelFlag = 'up';
+        } else {
+          return false;
+        }
+        beforeWheelNumber = wheelNumber+1;
+      }
+
+      console.log("beforeWheelNumber:" + beforeWheelNumber);
+      console.log("wheelNumber:" + wheelNumber);
+
+    return sectionEvent();  // 각 섹션들이 이벤트 작동되도록.
+
+    },wheelTimeout[wheelNumber]);
+
+  };
+});
+
       // Test. 브라우저에서 휠 횟수 볼 수 있게함 ( 추후 삭제 )
       // document.getElementById( 'wheelNumberPrint' ).value = wheelNumber;
       // document.getElementById( 'wheelNumberPrint2' ).value = wheelNumber;

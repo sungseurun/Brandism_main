@@ -125,8 +125,8 @@
   position: absolute;
   top: 0;
   left: 478px;
-  left: calc(50% - 478.5px);
-  width: 800px;
+  left: calc(50% - 375px);
+  width: 750px;
   height: 310px;
   display: flex;
   text-align: center;
@@ -145,10 +145,14 @@
 }
 #wrap .section1 .sec1_container .sec1_content .slide_text1 .sec1_img1 {
   position: absolute;
-  left: calc(50% - 132.5px + 80px);
-  top: 20px;
+  left: calc(50% - 200px + 70px);
+  top: 140px;
   animation: sec1Img 2.5s ease-in infinite;
-  width: 33%;
+  cursor: default;
+}
+#wrap .section1 .sec1_container .sec1_content .slide_text1 .sec1_img1 img {
+  width: 70%;
+  transform: rotate(-15deg);
 }
 @keyframes sec1Img {
   0% {
@@ -202,6 +206,7 @@
   position: absolute;
   left: calc(50% - 72.5px + 170px);
   top: 75px;
+  width: 8%;
   animation: sec1Img2 4s ease-in-out infinite;
 }
 @keyframes sec1Img2 {
@@ -377,8 +382,9 @@
 #wrap .section3 .sec3_container .sec3_content .sec3_gap a img {
   position: absolute;
   top: 40px;
-  left: calc(50% - 83px + 13px);
-  width: 17%;
+  left: calc(50% - 79.5px + 13px);
+  width: 16%;
+  cursor: default;
 }
 #wrap .section3 .sec3_container .sec3_content .sec3_gap .we {
   position: absolute;
@@ -408,7 +414,7 @@
 #wrap .section4 .sec4_container .sec4_content {
   position: absolute;
   top: 180px;
-  left: calc(50% - 206.5px - 400px);
+  left: calc(50% - 600px);
   width: 1200px;
   height: 600px;
 }
@@ -501,26 +507,36 @@
 }
 #wrap .section5 .sec5_container .sec5_content {
   position: absolute;
-  left: calc(50% - 300px - 460px);
+  left: calc(50% - 350px - 460px);
   top: 261px;
-  width: 600px;
+  width: 700px;
   height: 550px;
 }
 #wrap .section5 .sec5_container .sec5_content .sec5_img1 {
   position: absolute;
   top: 0;
-  left: calc(50% - 264px - 16px);
+  left: calc(50% - 250px);
 }
 #wrap .section5 .sec5_container .sec5_content .sec5_img1 img {
-  width: 90%;
+  width: 85%;
 }
 #wrap .section5 .sec5_container .sec5_content .sec5_img2 {
   position: absolute;
-  top: -20px;
-  left: calc(50% - 250px + 50px);
+  top: 240px;
+  left: calc(50% - 360px);
 }
 #wrap .section5 .sec5_container .sec5_content .sec5_img2 img {
-  width: 120%;
+  width: 33%;
+  transform: rotate(85deg);
+}
+#wrap .section5 .sec5_container .sec5_content .sec5_img3 {
+  position: absolute;
+  top: 260px;
+  left: calc(50% - 122.5px + 230px);
+}
+#wrap .section5 .sec5_container .sec5_content .sec5_img3 img {
+  width: 100%;
+  transform: rotate(17deg);
 }
 #wrap .section5 .sec5_container .sec5_gap {
   position: absolute;
@@ -617,11 +633,11 @@
 #wrap .section6 .sec6_container .sec6_content .sec6_gap img {
   position: absolute;
   top: 10px;
-  left: calc(50% - 83px);
+  left: calc(50% - 79.5px);
   justify-content: center;
   align-items: center;
-  width: 179px;
-  height: 184px;
+  width: 159px;
+  height: 150px;
 }
 #wrap .section6 .sec6_container .sec6_content .sec6_gap .sec6_brace2 {
   position: absolute;
@@ -709,24 +725,21 @@
 #wrap .section7 .sec7_container .sec7_content .object {
   opacity: 0;
   position: absolute;
-  left: calc(50% - 105px + 190px);
+  left: calc(50% - 95px + 200px);
   bottom: 25px;
-  width: 210px;
+  width: 190px;
   height: 182px;
 }
 #wrap .section7 .sec7_container .sec7_content .object .twinkle {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 20px;
+  width: 55%;
 }
 #wrap .section7 .sec7_container .sec7_content .object .arrow {
   position: absolute;
   right: 0;
   bottom: 45px;
-  width: 48px;
-  height: 36px;
-  background-image: url(../img/img_13.png);
-  background-position: absolute;
 }
 #wrap .section8 {
   background-color: #FFDA55;
@@ -812,11 +825,6 @@
   left: 260px;
   top: -105px;
 }
-#wrap .section11 .sec11_container .sec11_gap1 {
-  position: absolute;
-  top: -10%;
-  left: -2%;
-}
 #wrap .section11 .sec11_container .sec11_content {
   position: absolute;
   top: 330px;
@@ -876,11 +884,6 @@
 #wrap .section11 .sec11_container .sec11_content .sec11_text2 {
   text-align: right;
   padding-top: 5px;
-}
-#wrap .section11 .sec11_container .sec11_gap2 {
-  position: absolute;
-  top: 55%;
-  left: calc(50% - 211.5px + 745px);
 }
 #wrap .section12 {
   background-color: #000;

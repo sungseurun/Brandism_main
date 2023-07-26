@@ -151,8 +151,8 @@
             position: absolute;
             top: 0;
             left: 478px;
-            left: calc(50% - 957px/2 );
-            width: 800px;
+            left: calc(50% - 750px/2 );
+            width: 750px;
             height: 310px;  // img사이즈 높이가 345px
             display: flex;
             text-align: center;
@@ -170,10 +170,16 @@
             }
             .sec1_img1 {
               position: absolute;
-              left: calc(50% - 265px/2 + 80px);  //left: 315px;
-              top: 20px;  
+              left: calc(50% - 400px/2 + 70px);  //left: 315px;
+              top: 140px;  
               animation: sec1Img 2.5s ease-in infinite;
-              width: 33%;
+              cursor: default;
+              img {
+              width: 70%;
+              // width: 380px;
+              // height: 174px;
+              transform: rotate(-15deg);
+              }
             }
             @keyframes sec1Img {
               0% {transform: translateY(0);}
@@ -219,7 +225,9 @@
               position: absolute;
               left: calc(50% - 145px/2 + 170px);
               top: 75px;
-              // width: 8%;
+              width: 8%;
+              // width: 123px;
+              // height: 120px;
               animation: sec1Img2 4s ease-in-out infinite;
             }
             // 브랜디즘 스튜디오 사이의 별 애니메이션
@@ -363,8 +371,11 @@
               img {
                 position: absolute;
                 top: 40px;
-                left: calc(50% - 166px/2 + 13px);  //left: 430px;
-                width: 17%;
+                left: calc(50% - 159px/2 + 13px);  //left: 430px;
+                width: 16%; 
+                // width: 159px;
+                // height: 150px;
+                cursor: default;
 
               }
             }
@@ -404,7 +415,7 @@
         .sec4_content {
           position: absolute;
           top: 180px; 
-          left: calc(50% - 413px/2 - 400px);
+          left: calc(50% - 1200px/2);
           width: 1200px;
           height: 600px; 
           .about {
@@ -508,24 +519,41 @@
         .sec5_content {
           position: absolute;
           // left: 200px;
-          left: calc(50% - 600px/2 - 460px); 
+          left: calc(50% - 700px/2 - 460px); 
           top: 261px;
-          width: 600px;
+          width: 700px;
           height: 550px;
           .sec5_img1 {
             position: absolute;
             top: 0;
-            left: calc(50% - 264px - 16px);  //left: 20px;
+            left: calc(50% - 500px/2);  //left: 20px;
             img {
-              width: 90%;
+              width: 85%;
+              // width: 501px;
+              // height: 452px;
             }
           }
           .sec5_img2 {
             position: absolute;
-            top: -20px;
-            left: calc(50% - 500px/2 + 50px);  //left: 100px;
+            top: 240px;
+            left: calc(50% - 360px);  //left: 100px;
             img {
-              width: 120%;
+              width: 33%;
+              // width: 245px;
+              // height: 215px;
+              transform: rotate(85deg);
+            }
+          }
+          .sec5_img3 {
+            position: absolute;
+            top: 260px;
+            left: calc(50% - 245px/2 + 230px);  //left: 100px;
+            img {
+              width: 100%;
+              // width: 245px;
+              // height: 230px;
+              transform: rotate(17deg);
+
             }
           }
         }
@@ -629,11 +657,12 @@
             img {
               position: absolute;
               top: 10px;
-              left: calc(50% - 166px/2);  //left: 90px;
+              left: calc(50% - 159px/2);  //left: 90px;
               justify-content: center;
               align-items: center;
-              width: 179px;
-              height: 184px;
+              width: 159px;
+              height: 150px;
+              // width: 16%;
             }
             .sec6_brace2 {
               position: absolute;
@@ -727,24 +756,23 @@
           .object {
             opacity: 0;
             position: absolute;
-            left: calc(50% - 210px/2 + 190px);
+            left: calc(50% - 190px/2 + 200px);
             bottom: 25px;
-            width: 210px;
+            width: 190px;
             height: 182px;
             .twinkle {
               position: absolute;
               left: 0;
-              bottom: 0;
+              bottom: 20px;
+              width: 55%;
               // animation: opa 2s ease-in 3s;
             }
             .arrow {
               position: absolute;
               right: 0;
               bottom: 45px;
-              width: 48px;
-              height: 36px;
-              background-image: url(../img/img_13.png);
-              background-position: absolute;
+              // background-image: url(../img/arrow_b.png);
+              // background-position: absolute;
               
             }
           }
@@ -849,15 +877,12 @@
     }
     .section11 {
       .sec11_container {
-        .sec11_gap1 {
-          position: absolute;
-          top: -10%;
-          left: -2%;
-          > img {
-          // width: 423px;
-          // height: 423px;
-          }
-        }
+        // .sec11_gap1 {
+        //   position: absolute;
+        //   top: -10%;
+        //   left: -2%;
+        //   > img {}
+        // }
         .sec11_content {
           position: absolute;
           top: 330px; 
@@ -919,15 +944,12 @@
             padding-top: 5px;
           }
         }  
-        .sec11_gap2 {
-          position: absolute;
-          top: 55%;    //570px;
-          left: calc(50% - 423px/2 + 745px);
-          > img {
-            // width: 423px;
-            // height: 423px;
-          }
-        }
+        // .sec11_gap2 {
+        //   position: absolute;
+        //   top: 55%;    //570px;
+        //   left: calc(50% - 423px/2 + 745px);
+        //   > img {}
+        // }
       }
     }
 

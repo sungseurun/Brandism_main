@@ -21,9 +21,6 @@ window.addEventListener('wheel', function (e) {
 
     clearTimeout(timeout);  // 이전 휠 이벤트 제거
 
-    // wheelNumber에 따라 wheelTimeout 다르게 주기 이벤트
-    let wheelTimeout = [300,700,300,1000,1500,300,2200,300,300,300,1000];  //wheelNumber 1 ~ 11
-
     timeout = setTimeout(function(){  // 다시 휠 이벤트 발생
       if( e.deltaY > 1 ){
         wheelNumber++;
@@ -39,15 +36,15 @@ window.addEventListener('wheel', function (e) {
         beforeWheelNumber = wheelNumber+1;
       }
 
+      sectionEvent();  // 각 섹션들이 이벤트 작동되도록.
+      
       console.log("beforeWheelNumber:" + beforeWheelNumber);
       console.log("wheelNumber:" + wheelNumber);
-
-    return sectionEvent();  // 각 섹션들이 이벤트 작동되도록.
-
-    },wheelTimeout[wheelNumber]);
-
+  
+    },200);  // 0.1초 후
   };
 });
+
 
 
 // 섹션에 이벤트 주기 ( 휠 횟수, 휠 업·다운)
@@ -327,7 +324,7 @@ function section5Event(){
     {
       transform: [
         'translateY(0)',
-        'translateY(-30px)',
+        'translateY(-20px)',
         'translateY(-15px)',
         'translateY(0)',
       ]
@@ -343,11 +340,28 @@ function section5Event(){
   element2.animate (
     {
       transform: [
-        'translateY(-30px)',
+        'translateY(-20px)',
         'translateY(0)',
         'translateY(15px)',
         'translateY(0)',
-        'translateY(-30px)',
+        'translateY(-20px)',
+      ]
+    },
+    {
+      duration: 3500,            
+      iterations: Infinity,      
+      easing: 'ease-in-out',
+    }
+  );
+  const element3 = document.getElementById('sec5_img3');
+  element3.animate (
+    {
+      transform: [
+        'translateY(15px)',
+        'translateY(0)',
+        'translateY(-15px)',
+        'translateY(0)',
+        'translateY(15px)',
       ]
     },
     {
