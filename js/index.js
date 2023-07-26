@@ -722,27 +722,27 @@ function section10Event(){
 function section11Event(){
   
   // 오브젝트 이미지 서서히 나타나기 이벤트
-    document.getElementById('sec11_img1').animate(
-    [  // keyframes
-      {opacity: 0},
-      {opacity: 1}
-    ],
-    {  // options
-      duration: 2000,       
-      easing: 'ease-out',  
-      fill: 'forwards' 
-    }
-  );
-  document.getElementById('sec11_img2').animate(
-    [ 
-      {opacity: 0},
-      {opacity: 1}
-    ],{ 
-      duration: 2000,       
-      easing: 'ease-out',  
-      fill: 'forwards' 
-    }
-  );
+  //   document.getElementById('sec11_img1').animate(
+  //   [  // keyframes
+  //     {opacity: 0},
+  //     {opacity: 1}
+  //   ],
+  //   {  // options
+  //     duration: 2000,       
+  //     easing: 'ease-out',  
+  //     fill: 'forwards' 
+  //   }
+  // );
+  // document.getElementById('sec11_img2').animate(
+  //   [ 
+  //     {opacity: 0},
+  //     {opacity: 1}
+  //   ],{ 
+  //     duration: 2000,       
+  //     easing: 'ease-out',  
+  //     fill: 'forwards' 
+  //   }
+  // );
 
   const elementA = document.getElementById('sec11_brace1');
   elementA.animate (
