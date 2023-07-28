@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("/css/fonts.css");
 @import url("/css/reset.css");
 * {
@@ -33,15 +32,13 @@
   position: absolute;
   left: 102px;
   top: 60px;
-  width: 285px;
-  height: 66px;
+  width: 280px;
+  height: 55px;
 }
 #wrap .header .header-container .logo .logo-btn img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 281px;
-  height: 65.12px;
 }
 #wrap .header .header-container .menu {
   position: absolute;
@@ -746,12 +743,12 @@
 }
 #wrap .section8 .sec8_container .sec8_content {
   position: absolute;
-  top: 360px;
+  top: 340px;
   left: calc(50% - 315px);
-  display: flex;
-  width: 610px;
+  width: 630px;
   height: 246px;
   color: #000;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -768,28 +765,35 @@
   font-weight: 500;
   font-size: 3.75rem;
 }
-#wrap .section8 .sec8_container .sec8_content .sec8_img1 {
+#wrap .section8 .sec8_container .sec8_content .sec8_img_content {
   position: absolute;
-  left: calc(50% - 182.5px + 60px);
-  top: -95px;
+  left: calc(50% - 182.5px);
+  top: -25%;
+  width: 450px;
+  height: 370px;
 }
-#wrap .section8 .sec8_container .sec8_content .sec8_img1 img {
+#wrap .section8 .sec8_container .sec8_content .sec8_img_content .sec8_img1 {
+  position: absolute;
+  left: calc(50% - 182.5px);
+  top: 0px;
+}
+#wrap .section8 .sec8_container .sec8_content .sec8_img_content .sec8_img1 img {
   width: 100%;
 }
-#wrap .section8 .sec8_container .sec8_content .sec8_img2 {
+#wrap .section8 .sec8_container .sec8_content .sec8_img_content .sec8_img2 {
   position: absolute;
-  left: calc(50% - 182.5px + 20px);
-  top: -120px;
+  left: calc(50% - 182.5px);
+  top: 0px;
 }
-#wrap .section8 .sec8_container .sec8_content .sec8_img2 img {
+#wrap .section8 .sec8_container .sec8_content .sec8_img_content .sec8_img2 img {
   width: 100%;
 }
-#wrap .section8 .sec8_container .sec8_content .sec8_img3 {
+#wrap .section8 .sec8_container .sec8_content .sec8_img_content .sec8_img3 {
   position: absolute;
-  left: calc(50% - 182.5px + 20px);
-  top: -105px;
+  left: calc(50% - 182.5px - 10px);
+  top: 0;
 }
-#wrap .section8 .sec8_container .sec8_content .sec8_img3 img {
+#wrap .section8 .sec8_container .sec8_content .sec8_img_content .sec8_img3 img {
   width: 95%;
 }
 #wrap .section9 {
@@ -798,10 +802,11 @@
 #wrap .section9 .sec9_container .sec9_content {
   position: absolute;
   top: 360px;
-  left: calc(50% - 225px);
-  width: 450px;
-  height: 190px;
+  left: calc(50% - 315px);
+  width: 630px;
+  height: 210px;
   color: #000;
+  display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -809,43 +814,53 @@
 #wrap .section9 .sec9_container .sec9_content h3 {
   position: absolute;
   left: 0;
-  top: 54px;
+  top: 36%;
+  font: inherit;
   font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
   font-size: 3.75rem;
 }
-#wrap .section9 .sec9_container .sec9_content img {
+#wrap .section9 .sec9_container .sec9_content .sec9_img_content {
+  width: 365px;
+  height: 210px;
+  position: relative;
+  left: calc(50% - 182.5px - 140px);
+  top: -110px;
+}
+#wrap .section9 .sec9_container .sec9_content .sec9_img_content img {
   position: absolute;
-  left: calc(50% - 100px + 135px);
-  top: -55px;
+  left: 0;
+  top: 0;
 }
 #wrap .section10 .sec10_container .sec10_content {
   position: absolute;
-  top: 360px;
-  left: calc(50% - 285px);
-  width: 570px;
-  height: 270px;
+  top: 300px;
+  left: calc(50% - 355px);
+  width: 730px;
+  height: 350px;
   color: #000;
 }
 #wrap .section10 .sec10_container .sec10_content h3 {
   position: absolute;
   left: 0;
-  top: 54px;
+  top: 38%;
   font-family: "SUIT";
   font-style: normal;
   font-weight: 500;
   font-size: 3.75rem;
 }
-#wrap .section10 .sec10_container .sec10_content .image1 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+#wrap .section10 .sec10_container .sec10_content .sec10_img_content {
+  width: 430px;
+  height: 320px;
+  position: relative;
+  left: calc(50% - 215px + 80px);
+  top: -45px;
 }
-#wrap .section10 .sec10_container .sec10_content .image2 { /* 위에 올라오는 스크류 */
+#wrap .section10 .sec10_container .sec10_content .sec10_img_content img {
   position: absolute;
-  left: 260px;
-  top: -105px;
+  left: 0;
+  top: 0;
 }
 #wrap .section11 .sec11_container .sec11_content {
   position: absolute;
@@ -864,7 +879,6 @@
   line-height: 115px;
 }
 #wrap .section11 .sec11_container .sec11_content .sec11_text1 {
-  position: relative;
   text-align: center;
 }
 #wrap .section11 .sec11_container .sec11_content .sec11_wrap {
@@ -888,13 +902,6 @@
   top: 0;
 }
 #wrap .section11 .sec11_container .sec11_content .sec11_wrap .sec11_textBr {
-  position: relative;
-  z-index: 3;
-  color: #000;
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 5.625rem;
   text-align: center;
   display: flex;
 }
@@ -917,36 +924,31 @@
 }
 #wrap .section12 .sec12_container .logo {
   position: absolute;
-  left: calc(50% - 142.5px - 715px);
-  top: 60px;
-  width: 285px;
-  height: 66px;
+  left: calc(50% - 140px - 710px);
+  top: 50px;
+  width: 280px;
+  height: 55px;
 }
 #wrap .section12 .sec12_container .logo .logo-btn img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 281px;
-  height: 65.12px;
+  width: 279px;
+  height: 54px;
 }
 #wrap .section12 .sec12_container .number {
   position: absolute;
   top: 95px;
   right: calc(50% - 230.5px - 600px);
 }
-#wrap .section12 .sec12_container .number a {
-  cursor: pointer;
-}
 #wrap .section12 .sec12_container .number a img {
   float: right;
   width: 85%;
 }
 #wrap .section12 .sec12_container .sec12_content {
-  opacity: 0;
   position: absolute;
   top: 290px;
   left: calc(50% - 400px - 460px);
-  width: 800px;
 }
 #wrap .section12 .sec12_container .sec12_content .middle {
   color: #fff;
@@ -1009,6 +1011,7 @@
   bottom: 0;
 }
 #wrap .top-btn .top-button .pc-image {
+  display: block;
   width: 74px;
   height: 74px;
 }

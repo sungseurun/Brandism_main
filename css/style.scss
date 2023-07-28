@@ -33,15 +33,15 @@
         position: absolute;
         left: 102px;
         top: 60px;
-        width: 285px;
-        height: 66px;
+        width: 280px;
+        height: 55px;
         .logo-btn {
           img {
             position: absolute;
             top: 0;
             left: 0;
-            width: 281px;
-            height: 65.12px;
+            // width: 281px;
+            // height: 65.12px;
           }
         }
       }
@@ -785,12 +785,12 @@
       .sec8_container {
         .sec8_content {
           position: absolute;
-          top: 360px;
+          top: 340px;
           left: calc(50% - 630px/2); 
-          display: flex;
-          width: 610px;
+          width: 630px;
           height: 246px;
           color: #000;
+          display: flex;
           text-align: center;
           justify-content: center;
           align-items: center;
@@ -807,29 +807,35 @@
             font-size: 3.75rem;   //60px;
             // line-height: 88px;
           }
-          .sec8_img_content {}
-          .sec8_img1 {
+          .sec8_img_content {
             position: absolute;
-            left: calc(50% - 365px/2 + 60px);  //left: 260px;
-            top: -95px;
-            img {
-              width: 100%;
+            left: calc(50% - 365px/2);
+            top: -25%;  //-62px
+            width: 450px;
+            height: 370px;
+            .sec8_img1 {
+              position: absolute;
+              left: calc(50% - 365px/2);  //left: 260px;
+              top: 0px;
+              img {
+                width: 100%;
+              }
             }
-          }
-          .sec8_img2 {
-            position: absolute;
-            left: calc(50% - 365px/2 + 20px);  //left: 260px;
-            top: -120px;
-            img {
-              width: 100%;
+            .sec8_img2 {
+              position: absolute;
+              left: calc(50% - 365px/2);  //left: 260px;
+              top: 0px;
+              img {
+                width: 100%;
+              }
             }
-          }
-          .sec8_img3 {
-            position: absolute;
-            left: calc(50% - 365px/2 + 20px);  //left: 260px;
-            top: -105px;
-            img {
-              width: 95%;
+            .sec8_img3 {
+              position: absolute;
+              left: calc(50% - 365px/2 - 10px);  //left: 260px;
+              top: 0;
+              img {
+                width: 95%;
+              }
             }
           }
         }
@@ -841,26 +847,36 @@
         .sec9_content {
           position: absolute;
           top: 360px;
-          left: calc(50% - 450px/2); 
-          width: 450px;
-          height: 190px;
+          left: calc(50% - 630px/2); 
+          width: 630px;
+          height: 210px;
           color: #000;
+          display: flex;
           text-align: center;
           justify-content: center;
           align-items: center;
           h3 {
             position: absolute;
             left: 0;
-            top: 54px;
+            top: 36%;
+            font: inherit;
             font-family: 'SUIT';
             font-style: normal;
             font-weight: 500;
             font-size: 3.75rem;  //60px
+
           }
-          img {
-            position: absolute;
-            left: calc(50% - 200px/2 + 135px);  //left: 260px;
-            top: -55px;
+          .sec9_img_content {
+            width: 365px;
+            height: 210px;
+            position: relative;
+            left: calc(50% - 365px/2 - 140px);
+            top: -110px;
+            img {
+              position: absolute;
+              left: 0; 
+              top: 0;
+            } 
           }
         }
       }
@@ -869,32 +885,43 @@
       .sec10_container {
         .sec10_content {
           position: absolute;
-          top: 360px;
-          left: calc(50% - 570px/2);
-          width: 570px;
-          height: 270px; 
+          top: 300px;
+          left: calc(50% - 710px/2);
+          width: 730px;
+          height: 350px; 
           color: #000;
           h3 {
             position: absolute;
             left: 0;
-            top: 54px;
+            top: 38%;  //54px
             font-family: 'SUIT';
             font-style: normal;
             font-weight: 500;
             font-size: 3.75rem;   //60px
             // line-height: 88px;
           }
-          .image1 {
-            position: absolute;
-            right: 0;
-            bottom: 0;
+          .sec10_img_content {
+            width: 430px;
+            height: 320px;
+            position: relative;
+            left: calc(50% - 430px/2 + 80px);
+            top: -45px;
+            img {
+              position: absolute;
+              left: 0; 
+              top: 0;
+            } 
           }
-          .image2 {   /* 위에 올라오는 스크류 */
-            position: absolute;
-            left: 260px;
-            top: -105px;
-          }
-
+          // .image1 {
+          //   position: absolute;
+          //   right: 0;
+          //   bottom: 0;
+          // }
+          // .image2 {   /* 위에 올라오는 스크류 */
+          //   position: absolute;
+          //   left: 260px;
+          //   top: -105px;
+          // }
         }
       }
     }
@@ -922,7 +949,6 @@
             line-height: 115px;
           }
           .sec11_text1 {
-            position: relative;
             text-align: center;
           }
           .sec11_wrap {
@@ -946,13 +972,6 @@
               top: 0;
             }
             .sec11_textBr {
-              position: relative;
-              z-index: 3;
-              color: #000;
-              font-family: 'SUIT';
-              font-style: normal;
-              font-weight: 600;
-              font-size: 5.625rem;  //90px
               text-align: center;
               display: flex;
             }
@@ -976,13 +995,8 @@
       }
     }
 
-
     // 푸터
     .section12 {
-      //display: none;
-      // position: absolute;
-      // width: 100%;
-      // height: 100%;
       background-color: #000;
       .sec12_container {
         .backgrond_img {
@@ -995,17 +1009,19 @@
         }
         .logo {
           position: absolute;
-          left: calc(50% - 285px/2 - 715px);
-          top: 60px;  
-          width: 285px;
-          height: 66px;
+          left: calc(50% - 280px/2 - 710px);
+          top: 50px;  
+          // width: 860px;
+          // height: 165px;
+          width: 280px;
+          height: 55px;
           .logo-btn {
             img {
               position: absolute;
               top: 0;
               left: 0;
-              width: 281px;
-              height: 65.12px;
+              width: 279px;
+              height: 54px;
             }
           }
         }
@@ -1014,7 +1030,6 @@
           top: 95px;
           right: calc(50% - 461px/2 - 600px);  //right: 101px;
             a {
-              cursor: pointer;
               img{
                 float: right;
                 width: 85%;
@@ -1024,11 +1039,11 @@
         .sec12_content {
           // display: inherit;
           // visibility: hidden;  // 이건 js에서 설정함
-          opacity: 0;  // delay를 적용할땐 opacity:0 써줘야함
+          // opacity: 0;  // delay를 적용할땐 opacity:0 써줘야함
           position: absolute;
           top: 290px;  
           left: calc(50% - 800px/2 - 460px);
-          width: 800px;
+          // width: 800px;
           // height: 610px;
           .middle {
             color: #fff;
@@ -1096,6 +1111,7 @@
       right: 0;
       bottom: 0;
       .pc-image {
+        display: block;
         width: 74px;
         height: 74px;
       }

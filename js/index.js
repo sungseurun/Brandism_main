@@ -41,7 +41,7 @@ window.addEventListener('wheel', function (e) {
       console.log("beforeWheelNumber:" + beforeWheelNumber);
       console.log("wheelNumber:" + wheelNumber);
   
-    },200);  // 0.1초 후
+    },100);  // 0.1초 후
   };
 });
 
@@ -629,105 +629,141 @@ function section7Event(){
 
 function section8Event(){
 
-  // const elementT = document.getElementById('sec8_img');
-  // elementT.animate (
-  //   {
-  //     transform: [
-  //       'translate(-150px, -90px)', 
-  //       'translate(-100px, -70px)',
-  //       'translate(-40px, -30px)',
-  //       'translate(0)'
-  //     ]
-  //   },
-  //   {
-  //     duration: 1000,  
-  //     easing: 'ease'
-  //   }
-  // );
+  // 오브젝트 이미지 서서히 나타나기 이벤트
+    document.getElementById('sec8_img1').animate(
+    [  // keyframes
+      {opacity: 0},
+      {opacity: 1}
+    ],
+    {  // options
+      duration: 1500,       
+      easing: 'ease-out',  
+      fill: 'forwards' 
+    }
+  );
+  document.getElementById('sec8_img2').animate(
+    [ 
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 1}
+    ],{ 
+      duration: 1800,       
+      easing: 'ease-out',  
+      fill: 'forwards' 
+    }
+  );
+  document.getElementById('sec8_img3').animate(
+    [ 
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 1}
+    ],{ 
+      duration: 2000,       
+      easing: 'ease-out',  
+      fill: 'forwards' 
+    }
+  );
   
   console.log(sectionNum,'섹션8');
 }
 
 function section9Event(){
 
-  const element = document.getElementById('sec9_img');
-  element.animate (
-    {
-      transform: [
-        'translate(150px, 90px)', 
-        'translate(100px, 70px)',
-        'translate(40px, 30px)',
-        'translate(0)' 
-      ]
-    },
-    {
-      duration: 1000, 
-      easing: 'ease' 
+  // 오브젝트 이미지 서서히 나타나기 이벤트
+  document.getElementById('sec9_img1').animate(
+    [  // keyframes
+      {opacity: 0},
+      {opacity: 1}
+    ],
+    {  // options
+      duration: 1500,       
+      easing: 'ease-in-out',  
+      fill: 'forwards' 
+    }
+  );
+  document.getElementById('sec9_img2').animate(
+    [ 
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 1}
+    ],{ 
+      duration: 2000,       
+      easing: 'ease-in-out',  
+      fill: 'forwards' 
+    }
+  );
+  document.getElementById('sec9_img3').animate(
+    [ 
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 1}
+    ],{ 
+      duration: 2300,       
+      easing: 'ease-in-out',  
+      fill: 'forwards' 
     }
   );
   console.log(sectionNum,'섹션9');
-}
+};
 
 function section10Event(){
 
-  const element = document.getElementById('sec10_img1');
-  element.animate (
-    {
-      transform: [
-        'translate(150px, 90px)', 
-        'translate(100px, 70px)',
-        'translate(40px, 30px)',
-        'translate(0)' 
-      ]
-    },
-    {
-      duration: 1000,  
-      easing: 'ease'  
+  // 오브젝트 이미지 서서히 나타나기 이벤트
+    document.getElementById('sec10_img1').animate(
+    [  // keyframes
+      {opacity: 0},
+      {opacity: 1}
+    ],
+    {  // options
+      duration: 1500,       
+      easing: 'ease-in-out',  
+      fill: 'forwards' 
+    }
+  );
+  document.getElementById('sec10_img2').animate(
+    [ 
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 1}
+    ],{ 
+      duration: 1800,       
+      easing: 'ease-in-out',  
+      fill: 'forwards' 
+    }
+  );
+  document.getElementById('sec10_img3').animate(
+    [ 
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 1}
+    ],
+    { 
+      duration: 2100,       
+      easing: 'ease-in-out',  
+      fill: 'forwards' 
+    }
+  );
+  document.getElementById('sec10_img4').animate(
+    [ 
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 0},
+      {opacity: 1}
+    ],{ 
+      duration: 2500,       
+      easing: 'ease-in-out',  
+      fill: 'forwards' 
     }
   );
 
-  const elementE = document.getElementById('sec10_img2');
-  elementE.animate (
-    {
-      transform: [
-        'translate(-150px, -90px)', 
-        'translate(-100px, -70px)',
-        'translate(-40px, -30px)',
-        'translate(0)'
-      ]
-    },
-    {
-      duration: 1000,
-      easing: 'ease' 
-    }
-  );
   console.log(sectionNum,'섹션10');
 }
 
 function section11Event(){
-  
-  // 오브젝트 이미지 서서히 나타나기 이벤트
-  //   document.getElementById('sec11_img1').animate(
-  //   [  // keyframes
-  //     {opacity: 0},
-  //     {opacity: 1}
-  //   ],
-  //   {  // options
-  //     duration: 2000,       
-  //     easing: 'ease-out',  
-  //     fill: 'forwards' 
-  //   }
-  // );
-  // document.getElementById('sec11_img2').animate(
-  //   [ 
-  //     {opacity: 0},
-  //     {opacity: 1}
-  //   ],{ 
-  //     duration: 2000,       
-  //     easing: 'ease-out',  
-  //     fill: 'forwards' 
-  //   }
-  // );
 
   const elementA = document.getElementById('sec11_brace1');
   elementA.animate (
@@ -778,20 +814,22 @@ function section11Event(){
 function section12Event(){
 
   // 로고이미지 3배 비율로 커지기
-  const scaleResize = document.getElementById('logo');
-  scaleResize.animate(
-    {
-      transform: [    // 크기 이벤트 + 위치값 이벤트
-      'scale(1)' + 'translate(0)',
-      'scale(2.8)' + 'translate(90px, 17px)'
-     ] 
-    },
-    {
-      duration: 1500,  
-      easing: 'ease',    
-      fill: 'forwards',  
-    }
-  );
+  // const scaleResize = document.getElementById('logo');
+  // scaleResize.animate(
+  //   {
+  //     transform: [    // 크기 이벤트 + 위치값 이벤트
+  //     'scale(1)' + 'translate(0)',
+  //     'scale(3.07)' + 'translate(93px, 17px)'
+  //     // 'scale(0.6)' + 'translate( -100px, 0)',
+
+  //    ] 
+  //   },
+  //   {
+  //     duration: 1500,  
+  //     easing: 'ease',    
+  //     fill: 'forwards',  
+  //   }
+  // );
 
   // 푸터 number 이미지
   let keyframes1 = [
