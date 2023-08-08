@@ -1,8 +1,8 @@
 * {margin: 0;padding: 0;vertical-align:middle;font-size: 100%;box-sizing: border-box;font-size-adjust:100%;}
 html,body {width: 100%;height: 100%;}
 html {overflow-y: scroll;/* scroll-behavior: smooth; */}
-body {font: normal 14px/1 'Noto Sans', 'Noto Sans KR', 'Nanum Gothic', '맑은고딕', 'Montserrat', 'arial', 'SUIT', 'Cormorant Garamond', 'Cormorant'; color:#333;background: #fff;}
-h1,h2,h3,h4,h5,h6,strong,b {font-weight: normal;font-size: 14px;}
+body {font: normal 16px/1 'Noto Sans', 'Noto Sans KR', 'Nanum Gothic', '맑은고딕', 'Montserrat', 'arial', 'SUIT', 'Cormorant Garamond', 'Cormorant';}
+h1,h2,h3,h4,h5,h6,strong,b {font-weight: normal;font-size: 16px;}
 i,em,address {font-style: normal;}
 ul {list-style: none;}
 a {color:#444;text-decoration: none;;}
@@ -40,6 +40,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -63,4 +64,28 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+:root {
+	--neutral-gray-50 : #f1f1f1 , rgb(241, 241, 241);
+	--neutral-gray-100 : #d4d4d4 , rgb(212, 212, 212);
+	--neutral-gray-200 : #bfbfbf , rgb(191, 191, 191);
+	--neutral-gray-300 : #a1a1a1 , rgb(161, 161, 161);
+	--neutral-gray-400 : #8f8f8f , rgb(143, 143, 143);
+	--neutral-gray-500 : #737373 , rgb(115, 115, 115);
+	--neutral-gray-600 : #696969 , rgb(105, 105, 105);
+	--neutral-gray-700 : #525252 , rgb(82, 82, 82);
+	--neutral-gray-800 : #3f3f3f , rgb(63, 63, 63);
+	--neutral-gray-900 : #303030 , rgb(48, 48, 48);
+
+	--primary-brown-Light : #fbf7f2 , rgb(251, 247, 242);
+	--primary-brown-LightHover : #faf3eb , rgb(250, 243, 235);
+	--primary-brown-LightActive : #f4e7d6 , rgb(244, 231, 214);
+	--primary-brown-Normal : #dbb27a , rgb(219, 178, 122);
+	--primary-brown-NormalHover : #c5a06e , rgb(197, 160, 110);
+	--primary-brown-NormalActive : #af8e62 , rgb(175, 142, 98);
+	--primary-brown-Dark : #a4865c , rgb(164, 134, 92);
+	--primary-brown-DarkHover : #836b49 , rgb(131, 107, 73);
+	--primary-brown-DarkActive : #635037 , rgb(99, 80, 55);
+	--primary-brown-DarkActive : #4d3e2b , rgb(77, 62, 43);
 }
