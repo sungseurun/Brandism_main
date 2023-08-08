@@ -25,7 +25,7 @@
     max-width: 1903px;
     width: 100%;
     margin: 0 auto;
-    .header-container {
+    .header_container {
       max-width: 1920px;
       width: 100%;
       position: fixed;
@@ -35,7 +35,7 @@
         top: 60px;
         width: 280px;
         height: 55px;
-        .logo-btn {
+        .logo_btn {
           img {
             position: absolute;
             top: 0;
@@ -45,31 +45,33 @@
           }
         }
       }
-      .menu {
-        position: absolute;
-        top: 70px;
-        right: 112px;
-        line-height: 40px;
-        li {
-          font-size: 1.5625rem;   //25px
-          font-weight: 700;
-          color: #000;
-          font-family: 'Outfit';
-          font-style: normal;
-          text-align: right;
-        }
-      } 
+      nav {
+        .header_menu {
+          position: absolute;
+          top: 70px;
+          right: 112px;
+          line-height: 40px;
+          li {
+            font-size: 1.5625rem;   //25px
+            font-weight: 700;
+            color: #000;
+            font-family: 'Outfit';
+            font-style: normal;
+            text-align: right;
+          }
+        } 
+      }
       // 모바일 메뉴 버튼
-      .mobile-menu-btn {
+      .mobile_menu_btn {
         display: none;
         position: absolute;
-        right: 10%;
-        top: 55px;
+        right: 9%;
+        top: 30px;
         width: 48px;
         height: 48px;
         // margin: auto 5px auto auto;
 
-        .mobile-menu {
+        .mobile_menu_bar {
           display: block;
           width: 22px;
           height: 17px;
@@ -102,6 +104,8 @@
           }
         }
       }
+      // 모바일메뉴 버튼 클릭했을 때 나오는 페이지는 따로 만들었음 menu.scss
+      
     }
   }
 
@@ -1104,18 +1108,18 @@
     }
   //}
 
-  .top-btn {
-    .top-button {
+  .top_btn {
+    .top_button {
       z-index: 5;
       position: fixed;
       right: 0;
       bottom: 0;
-      .pc-image {
+      .pc_image {
         display: block;
         width: 74px;
         height: 74px;
       }
-      .mo-image {
+      .mo_image {
         display: none;
       }
     }

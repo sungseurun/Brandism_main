@@ -45,8 +45,6 @@ window.addEventListener('wheel', function (e) {
   };
 });
 
-
-
 // 섹션에 이벤트 주기 ( 휠 횟수, 휠 업·다운)
 function sectionEvent(){
 
@@ -858,4 +856,11 @@ function section12Event(){
   };  
   document.getElementById('sec12_content').animate(keyframes2, options2);
 
+}
+
+/* Top버튼 누르면 처음화면(section1)으로 가게하는 이벤트 */
+function moveTop(){
+  wheelNumber=0;
+  wheelFlag="up";
+  sectionEvent();
 }

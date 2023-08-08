@@ -13,33 +13,30 @@
 
 /* 모바일 375px x 667px  -->  모바일버전 디자인 사이즈 */
 @media all and (max-width: 743px) {
-  #wrap .header .header-container {
+  #wrap .header .header_container {
     width: 100%;
     height: 70px;
     position: fixed;
   }
-  #wrap .header .header-container .logo {
+  #wrap .header .header_container .logo {
     position: absolute;
     left: 9%;
     top: 40%;
     width: 120px;
     height: 30px;
   }
-  #wrap .header .header-container .logo .logo-btn img {
+  #wrap .header .header_container .logo .logo_btn img {
     position: absolute;
     top: 0;
     left: 0;
     width: 112px;
     height: 20px;
   }
-  #wrap .header .header-container .menu {
+  #wrap .header .header_container nav .header_menu {
     display: none;
   }
-  #wrap .header .header-container .mobile-menu-btn {
+  #wrap .header .header_container .mobile_menu_btn {
     display: block;
-    position: absolute;
-    right: 9%;
-    top: 30px;
   }
   #wrap .section {
     display: flex;
@@ -580,18 +577,18 @@
     font-size: 0.6875rem;
     line-height: 30px;
   }
-  #wrap .top-btn .top-button {
+  #wrap .top_btn .top_button {
     z-index: 5;
     position: fixed;
     right: 4%;
     bottom: 3%;
   }
-  #wrap .top-btn .top-button .pc-image {
+  #wrap .top_btn .top_button .pc_image {
     display: none;
   }
-  #wrap .top-btn .top-button .mo-image {
+  #wrap .top_btn .top_button .mo_image {
     display: block;
     width: 48px;
     height: 48px;
   }
-}/*# sourceMappingURL=response.css.map */
+}/*# sourceMappingURL=mo-main.css.map */

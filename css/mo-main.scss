@@ -19,7 +19,7 @@
 @media all and (max-width: 743px){
   #wrap {
     .header {
-      .header-container {
+      .header_container {
         width: 100%;
         height: 70px;
         position: fixed;
@@ -29,7 +29,7 @@
           top: 40%;  //28px
           width: 120px;
           height: 30px;
-          .logo-btn {
+          .logo_btn {
             img {
               position: absolute;
               top: 0;
@@ -39,15 +39,13 @@
             }
           }
         }
-        .menu {
+        nav .header_menu {
           display: none;
         }
-        .mobile-menu-btn {
+        .mobile_menu_btn {
           display: block;
-          position: absolute;
-          right: 9%;
-          top: 30px;
         }
+
       }
     }
     // #main {
@@ -596,16 +594,16 @@
         }
  // }
     }
-    .top-btn {
-      .top-button {
+    .top_btn {
+      .top_button {
         z-index: 5;
         position: fixed;
         right: 4%;
         bottom: 3%;
-        .pc-image {
+        .pc_image {
           display: none;
         }
-        .mo-image {
+        .mo_image {
           display: block;
           width: 48px;
           height: 48px;

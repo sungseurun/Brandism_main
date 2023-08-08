@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brandism_portfolio_page</title>
+  <title>Brandism_Main_Page</title>
 
   <!-- css 연동 -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/fonts.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/response.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/mo-main.css"> 
 </head>
 
 <body>
 
   <!-- 웹접근성 -->
-
   <ul id="skip">
     <li><a href="header">메뉴바로가기</a></li>
     <li><a href="section">메인바로가기</a></li>
@@ -26,24 +25,28 @@
 <div id="wrap">
 
   <header id="header" class="header">
-    <div class="header-container">
+    <div class="header_container">
       <div class="logo" >
-        <a href="#" class="logo-btn"><img id="header-logo" class="desktop-img logoup" src="./img/homebutton_logo.png" alt=""></a>
+        <a href="#" class="logo_btn"><img id="header_logo" class="desktop-img logoup" src="./img/homebutton_logo.png" alt=""></a>
 <!--         <textarea style="margin-top: -20%;" id="wheelNumberPrint"></textarea> -->  <!-- 추후 완성시 삭제 필요 -->
       </div>
-      <ul class="menu" id="header-menu">
-        <a href="#"><li>About</li></a>
-        <a href="#"><li>Portfolio</li></a>
-        <a href="#"><li>Our</li></a>
-        <a href="#"><li>Contact</li></a>
-      </ul>
-      <div class="mobile-menu-btn">
-        <a href="#" class="mobile-menu" id="mobile-menu">
+      <nav>
+        <ul class="header_menu" id="header_menu">
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Portfolio</li></a>
+          <a href="#"><li>Our</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </nav>
+      <!-- 모바일 메뉴바 버튼 -->
+      <div class="mobile_menu_btn">
+        <a href="./menu.html" class="mobile_menu_bar" id="mobile_menu_bar">
           <i></i>
-          <i></i>
+          <i></i> 
           <i></i>
         </a>
       </div>
+      <!-- 모바일메뉴 버튼 클릭했을 때 나오는 페이지는 새로 만듬 menu.html -->
     </div>
   </header>
 
@@ -217,9 +220,6 @@
 
     <section id="section11" class="section section11">
       <div class="sec11_container container">
-        <!-- <div class="sec11_gap1">
-          <img id="sec11_img1" src= "./img/img_9.png" alt="">
-        </div> -->
         <div class="sec11_content">
           <h3 class="sec11_text1 sec11_text">창출가치를 잇는</h3>
           <div class="sec11_wrap">
@@ -229,12 +229,10 @@
           </div>
           <h5 class="sec11_text2 sec11_text" id="sec11_text2">입니다.</h5>
         </div>
-        <!-- <div class="sec11_gap2">
-          <img id="sec11_img2" src="./img/img_10.png" alt="">
-        </div> -->
       </div>
     </section>
 
+    <!-- 푸터 -->
     <section id="section12" class="section section12">
       <div class="sec12_container container">
         <div class="backgrond_img"><img src="./img/blur_object3.png" alt=""></div>
@@ -243,10 +241,7 @@
           <!-- <textarea style="margin-top: -10%;" id="wheelNumberPrint3"></textarea>  -->
         </div>
         <div class="number" id="number">
-          <a href="https://brandinglize.com/"><img src="./img/footer_tel_number.png" alt=""></li></a>
-          <!-- <li>02</li>
-          <li>6101</li>
-          <li>3399</li> -->
+          <a href="https://brandinglize.com/"><img src="./img/footer_tel_number.png" alt=""></a>
         </div>
         <div class="sec12_content" id="sec12_content">
           <ul class="middle">
@@ -272,38 +267,17 @@
 
   <!-- </main> -->
 
-  <footer id="footer" class="footer">
-    <section id="footer" class="section section13">
-      <div class="footer-container container">
-        <div class="footer-content">
-          <div class="footer-gap">
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
-
   <!-- Top 버튼 -->
-  <div class="top-btn">
-    <a href="" title="처음으로" class="top-button" id="topBtn">
-      <img class="pc-image" src="./img/top_button.png" alt="메인으로">
-      <img class="mo-image" src="./img/mo_top_btn.png" alt="메인으로">
+  <div class="top_btn" id="top_btn">
+    <a href="javascript:moveTop()" title="처음으로" class="top_button" id="top_button">
+      <img class="pc_image" src="./img/top_button.png" alt="메인으로">
+      <img class="mo_image" src="./img/mo_top_btn.png" alt="메인으로">
     </a>
   </div>
 </div>  
-  
 
-  <!-- jQuery & Bootstrap -->
-  <!-- <script src="https://code.jquery.com/jquery-1.11.3.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
-
-<script src="./js/index.js"></script>
-<!-- <script src="./js/topBtn.js"></script> -->
+<script src="./js/mo-main.js"></script>
+<script src="./js/main.js"></script>
 
 </body>
 </html>
