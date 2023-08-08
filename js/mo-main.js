@@ -1,3 +1,10 @@
+
+// window.matchMedia( '(max-width: 743px)' ).matches ({
+
+// })
+
+
+
 // 자바스크립트 모바일 터치이벤트 touchstart / touchmove /touchend 
 
 

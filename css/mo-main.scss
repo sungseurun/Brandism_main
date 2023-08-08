@@ -545,7 +545,8 @@
             }
           }
           .number {
-            right: 30px;
+            // right: 30px;
+            right: calc(50% - 185px + 20px);
             top: 120px;
             a img {
               width: 42%;

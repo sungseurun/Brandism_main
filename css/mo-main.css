@@ -538,7 +538,7 @@
     height: 50px;
   }
   #wrap .section .sec12_container .number {
-    right: 30px;
+    right: calc(50% - 185px + 20px);
     top: 120px;
   }
   #wrap .section .sec12_container .number a img {
