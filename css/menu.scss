@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import url('/css/fonts.css');
+@import url('/css/reset.css');
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (max-width: 743px) {
+  #mobile_wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    .mobile_header {
+      position: relative;
+      width: 100%;
+      .header_container {
+        width: 100%;
+        .mobile_menu_btn {
+          display: block;
+          .close::after {
+            content: "\00d7";
+            font-size: 2.6875rem;  /* 43px */
+            font-weight: 300;
+            color: #000;
+            position: absolute;
+            right: 9%;
+            top: 12px;
+          }
+        }
+      }
+    }
+    .section {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .mobile_menu {
+        nav {
+          .mobile_menu_list {
+            position: absolute;
+            top: 240px;
+            left: calc(50% - 103px/2);
+            width: 105px;
+            height: 190px;
+            // line-height: 31.5px;
+            li {
+              font-size: 1.5625rem;   //25px
+              font-weight: 700;
+              color: #000;
+              font-family: 'Outfit';
+              font-style: normal;
+              text-align: center;
+              line-height: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
