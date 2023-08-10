@@ -23,7 +23,7 @@ jobs:
           AWS_REGION: "ap-northeast-2"
           SOURCE_DIR: ""
       - name: Invalidate CloudFront Cache
-        uses: chetan/invalidate-cloudfront-action@v1.3
+        uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.DISTRIBUTION_ID }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
