@@ -46,12 +46,7 @@
 <body>
     <div id="header"></div>
     <aside>
-        <button id="goTop" class="aside__move-top-button" >
-            <!-- <img src="../img/contact__arrow-button-top.svg"/> -->
-            <svg id="arrow-button-top" width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.96013 16.0398L5.96013 1.96015M5.96013 1.96015L0.717695 7.20259M5.96013 1.96015L11.0528 7.05281" stroke="black" stroke-width="1.97872"/>
-            </svg>                
-        </button>
+        <div id="upButton"></div>
     </aside>
     <section class="contact-wrap">
         <div class="contact-wrap__info">
@@ -152,21 +147,6 @@
          	       console.log('FAILED...', error);
          	    });
             });
-
-            //메뉴 토글
-            function showMenu() {
-                const open_nav = document.getElementById("navOpen");
-                const close_nav = document.getElementById("navClose");
-                const sidebar = document.querySelector("#sidebar");
-                open_nav.addEventListener("click", () => {
-                    // if(document.getElementById('topMenu').classList.contains('pc-only')) 
-                        document.getElementById('topMenu').classList.remove('pc-only'); 
-                });
-                close_nav.addEventListener("click", () => {
-                        document.getElementById('topMenu').classList.add('pc-only'); 
-                });
-            };
-            showMenu();
         }
 
         //개인정보수집동의체크박스
@@ -180,31 +160,8 @@
             document.getElementById('result').innerText = result;
         }
 
-        //위로가기
-        const scroll = () => {
-            const scrollBtn = document.getElementById('goTop')
-            const scrollBtnDisplay = () => {
-                window.addEventListener('scroll', () => {
-                    if (document.querySelector('html').scrollTop > 100) {
-                    document.getElementById('goTop').style.display = "block";
-                    } else {
-                    document.getElementById('goTop').style.display = "none";
-                    }
-                });
-            };
-            const scrollWindow = function () { 
-                if (window.scrollY != 0) {
-                    setTimeout(function () {
-                    window.scrollTo(0, window.scrollY - 50);
-                    scrollWindow();
-                    }, 10);
-                }
-            };
-            scrollBtnDisplay();
-            scrollBtn.addEventListener("click", scrollWindow);
-        }
-        
-        scroll();
     </script>
+        <script type="text/javascript" src="../js/global.js" ></script>
+
 </body>
 </html>
