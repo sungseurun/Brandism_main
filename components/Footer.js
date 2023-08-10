@@ -5,7 +5,7 @@ export default class Footer extends Component {
     return `
     <footer>
         <h2 class="footer__title">
-            <img src="img/footer-title-logo.svg" alt="브랜디즘 로고">
+            <img src="../img/footer-title-logo.svg" alt="브랜디즘 로고">
         </h2>
         <div class="pc-flex">
             <div class="footer__address_wrap">
