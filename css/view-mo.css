@@ -1,0 +1,92 @@
+@import url('fonts.css');
+
+body {
+  background-color: black;
+  color: white;
+  font-family: SUIT-Regular, serif;
+}
+
+.category h2 {
+  color: #DBB27A;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.goto-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 190px;
+  height: 55px;
+  border: 1px solid #71717A;
+  border-radius: 5px;
+  background-color: black;
+  background-image: url('img/img_7.png');
+  color: #A1A1A1;
+  cursor: pointer;
+  font-family: SUIT-Regular, serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 55px;
+}
+
+.goto-list img {
+  width: 16px;
+  height: 16px;
+  margin-left: 24px;
+}
+
+@media (max-width: 1200px) {
+  .pc {
+    display: none;
+  }
+
+  .wrap {
+    width: 100%;
+    padding: 60px 8.07% 75px 4.80%;
+  }
+
+  .category {
+    margin-top: 32px;
+  }
+
+  .category h2 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .title {
+    padding-top: 18px;
+    padding-bottom: 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .thumbnail img {
+    width: 100%;
+  }
+
+  .sub-image img {
+    width: 100%;
+  }
+
+  .content {
+    padding-top: 32px;
+    padding-bottom: 44px;
+  }
+
+  .content p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+
+
+
+
+}
+
+

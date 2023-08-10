@@ -1,0 +1,55 @@
+@media (min-width:1200px) {
+  .mo {
+    display: none;
+  }
+
+  .wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 279px;
+    padding-bottom: 268px;
+  }
+
+  .category {
+    margin-top: 68px;
+  }
+
+  .category h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  section {
+    margin-top: 31px;
+  }
+
+  .flex-container {
+    display: flex;
+    gap: 60px;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 39px;
+  }
+
+  .content {
+    padding-top: 66px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .images img {
+    width: 680px;
+  }
+
+  .button-wrapper {
+    float: right;
+  }
+
+  .goto-list {
+    margin-top: 52px;
+    width: 229px;
+  }
+}
