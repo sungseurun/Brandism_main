@@ -172,33 +172,33 @@ function section1Event(){
   let twiceScale = "";
   let threeScale = "";
 
-  if(wheelFlag=='down'){  
-    beforeScale = 'scale(1)' + 'translate(0)',
-    onceScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
-    twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
-    threeScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
-    afterScale = 'scale(0.2)' + 'translate(-300px, -1550px)'
-  } else {  
-    beforeScale = 'scale(0.2)' + 'translate(-300px, -1550px)',
-    onceScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
-    twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
-    threeScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
-    afterScale = 'scale(1)' + 'translate(0)'
+// 모바일 이벤트 --> 170px x 50px
+  if (window.matchMedia("(max-width: 744px)").matches) {
+    if(wheelFlag=='down'){  
+      beforeScale = 'scale(1)' + 'translate(0)',
+      // onceScale  = 'scale(0.9)' + 'translate(0, -30px)',
+      // twiceScale = 'scale(0.8)' + 'translate(0, -120px)',
+      // threeScale = 'scale(0.7)' + 'translate(0, -200px)',
+      afterScale = 'scale(0.5)' + 'translate(0px, -350px)'
+    } else {  
+      beforeScale = 'scale(0.5)' + 'translate(0px, -350px)',
+      afterScale = 'scale(1)' + 'translate(0)'
+    }
+  } else {
+    if(wheelFlag=='down'){  
+      beforeScale = 'scale(1)' + 'translate(0)',
+      onceScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
+      twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
+      threeScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
+      afterScale = 'scale(0.2)' + 'translate(-300px, -1550px)'
+    } else {  
+      beforeScale = 'scale(0.2)' + 'translate(-300px, -1550px)',
+      onceScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
+      twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
+      threeScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
+      afterScale = 'scale(1)' + 'translate(0)'
+    }
   }
-
-  // if(wheelFlag=='down'){  
-  //   beforeScale = 'scale(1)' + 'translate(0)',
-  //   onceScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
-  //   twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
-  //   threeScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
-  //   afterScale = 'scale(0.2)' + 'translate(-300px, -1550px)'
-  // } else {  
-  //   beforeScale = 'scale(0.2)' + 'translate(-300px, -1550px)',
-  //   onceScale = 'scale(0.35)' + 'translate(-170px, -1200px)',
-  //   twiceScale = 'scale(0.5)' + 'translate(-100px, -830px)',
-  //   threeScale  = 'scale(0.7)' + 'translate(-30px, -400px)',
-  //   afterScale = 'scale(1)' + 'translate(0)'
-  // }
 
   const element = document.getElementById('sec1_scale');
   
@@ -578,6 +578,7 @@ function section7Event(){
       );
     }, 1800);
   
+    /* contact 왼쪽으로 이동 */
     const element2 = document.getElementById('sec7_contact');
     element2.animate (
       {
@@ -591,21 +592,38 @@ function section7Event(){
         fill: 'forwards'
       }
     );
-    setTimeout(function(){
-      element2.animate (
-        {
-          transform: [
-            'translateX(-115px)'
-          ]
-        },
-        {
-          duration: 900,
-          easing: 'ease-in-out',
-          fill: 'forwards'
-        }
-      );
-      // console.log("contact 위치변경")
-    }, 1800);
+    // 모바일 max-width: 743px
+    if (window.matchMedia("(max-width: 743px)").matches) {
+      setTimeout(function(){
+        element2.animate (
+          {
+            transform: [
+              'translateX(-55px)'
+            ]
+          },
+          {
+            duration: 900,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+          }
+        );
+      }, 1800);
+    } else {  // min-width: 744px
+      setTimeout(function(){
+        element2.animate (
+          {
+            transform: [
+              'translateX(-115px)'
+            ]
+          },
+          {
+            duration: 900,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+          }
+        );
+      }, 1800);
+    }
 
     const element3 = document.getElementById('sec7_object');
     element3.animate (
@@ -812,22 +830,37 @@ function section11Event(){
 function section12Event(){
 
   // 로고이미지 3배 비율로 커지기
-  // const scaleResize = document.getElementById('logo');
-  // scaleResize.animate(
-  //   {
-  //     transform: [    // 크기 이벤트 + 위치값 이벤트
-  //     'scale(1)' + 'translate(0)',
-  //     'scale(3.07)' + 'translate(93px, 17px)'
-  //     // 'scale(0.6)' + 'translate( -100px, 0)',
-
-  //    ] 
-  //   },
-  //   {
-  //     duration: 1500,  
-  //     easing: 'ease',    
-  //     fill: 'forwards',  
-  //   }
-  // );
+  const scaleResize = document.getElementById('logo');
+  
+  if (window.matchMedia("(max-width: 743px)").matches) { //max-width: 743px
+    scaleResize.animate(
+      {
+        transform: [    // 크기 이벤트 + 위치값 이벤트
+        'scale(1)' + 'translate(0)',
+        'scale(1.2)' + 'translate(25px, 0px)'
+       ] 
+      },
+      {
+        duration: 1000,  
+        easing: 'ease',    
+        fill: 'forwards',  
+      }
+    );
+  } else {  //min-width: 744px
+    scaleResize.animate(
+      {
+        transform: [    // 크기 이벤트 + 위치값 이벤트
+        'scale(1)' + 'translate(0)',
+        'scale(3.07)' + 'translate(93px, 17px)'
+       ] 
+      },
+      {
+        duration: 1500,  
+        easing: 'ease',    
+        fill: 'forwards',  
+      }
+    );
+  }
 
   // 푸터 number 이미지
   let keyframes1 = [

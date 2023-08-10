@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import url("../fonts.css");
+@import url("../reset.css");
+/* 모바일 우선 css 작업 */
+@media all and (min-width: 320px) {
+  #wrap {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background-color: black;
+  }
+  #wrap header nav ul {
+    display: none;
+  }
+  #wrap .section {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #wrap .section1 .sec1_container {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  #wrap .section1 .sec1_container .mo__background-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0px;
+  }
+  #wrap .section1 .sec1_container .pc__background-img {
+    display: none;
+  }
+  #wrap .section1 .sec1_container .sec1_content {
+    width: 160px;
+    height: 120px;
+    margin-top: 111px;
+  }
+  #wrap .section1 .sec1_container .sec1_content h1 {
+    font-family: Cormorant Garamond;
+    font-style: italic;
+    font-size: 3.25rem;
+    font-weight: 300;
+    line-height: 63px;
+    letter-spacing: -0.03rem;
+    color: #DBB27A;
+  }
+  #wrap .section1 .sec1_container .sec1_content h2 {
+    font-family: SUIT;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: -0.05em;
+    color: white;
+    padding-top: 5px;
+    text-align: center;
+  }
+  #wrap .section2 .sec2_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px auto;
+  }
+  #wrap .section2 .sec2_container ul {
+    font-family: Outfit;
+    font-size: 1.25rem;
+    font-weight: 100;
+    display: flex;
+    color: white;
+  }
+  #wrap .section2 .sec2_container ul li {
+    padding: 12px;
+  }
+  #wrap .section2 .sec2_content {
+    padding-top: 21px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  #wrap .section2 .sec2_content .box {
+    width: 340px;
+    height: 130px;
+    background-color: #262626;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  #wrap .section3 .sec3-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 360px;
+  }
+  #wrap .section3 .sec3-container .view {
+    margin: 32px 10px 0;
+    width: 160px;
+    height: 210px;
+  }
+  #wrap .section3 .sec3-container .view .gap {
+    width: 160px;
+    height: 160px;
+    background-color: #D9D9D9;
+  }
+  #wrap .section3 .sec3-container .view .content {
+    text-overflow: ellipsis;
+    width: 160px;
+    height: 50px;
+    line-height: 21px;
+    padding-top: 10px;
+  }
+  #wrap .section3 .sec3-container .view .content h2 {
+    color: #DBB27A;
+    font-family: SUIT;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  #wrap .section3 .sec3-container .view .content h3 {
+    color: white;
+    font-family: SUIT;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+    text-overflow: ellipsis;
+  }
+  #wrap .section4 .sec4-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 460px;
+  }
+  #wrap .section4 .sec4-container .view {
+    margin: 32px 10px 0;
+    width: 160px;
+    height: 210px;
+  }
+  #wrap .section4 .sec4-container .view .gap {
+    width: 160px;
+    height: 160px;
+    background-color: #D9D9D9;
+  }
+  #wrap .section4 .sec4-container .view .content {
+    width: 160px;
+    height: 50px;
+    line-height: 21px;
+    padding-top: 10px;
+  }
+  #wrap .section4 .sec4-container .view .content h2 {
+    color: #DBB27A;
+    font-family: SUIT;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  #wrap .section4 .sec4-container .view .content h3 {
+    color: white;
+    font-family: SUIT;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+  }
+  #wrap .section4 .sec4-page {
+    margin: 80px 0;
+    width: 330px;
+    height: 50px;
+  }
+  #wrap .section4 .sec4-page .pagination {
+    display: flex;
+    justify-content: center;
+    font-family: SUIT;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 328px;
+    height: 48px;
+  }
+  #wrap .section4 .sec4-page .pagination li {
+    padding: 0 25px;
+  }
+  #wrap footer {
+    padding: 0 39.87% 101px 5.6%;
+    position: relative;
+  }
+  #wrap footer h4 {
+    font-family: Outfit;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+  #wrap footer .footer__copyright {
+    font-size: 0.6875rem;
+  }
+  #wrap .aside__move-top-button {
+    width: 48px;
+    height: 48px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 4.8%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+}/*# sourceMappingURL=list-mo.css.map */

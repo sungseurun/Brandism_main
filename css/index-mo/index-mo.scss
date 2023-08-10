@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url('/css/fonts.css');
-@import url('/css/reset.css');
+@import url('../fonts.css');
+@import url('../reset.css');
 
 /*반응형 화면 크기*/
 // mobile: 768px     @media all and (max-width: 768px, min-width: 320px){}
@@ -269,8 +269,6 @@
             height: 170px;
             .sec5_img1 {
               left: calc(50% - 150px/2);
-              img {
-              }
             }
             .sec5_img2 {
               left: -5%;
@@ -528,7 +526,7 @@
           }
         }
         .sec12_container {
-          .backgrond_img {
+          .background_img {
             img {
               left: -5%;
               top: -63%;
@@ -545,10 +543,12 @@
             }
           }
           .number {
-            right: 30px;
+            // right: 30px;
+            right: calc(50% - 185px + 20px);
             top: 120px;
             a img {
-              width: 42%;
+              // width: 42%;
+              width: 185px;
             }
           }
           .sec12_content { 

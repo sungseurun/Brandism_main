@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("/css/fonts.css");
-@import url("/css/reset.css");
+@import url("../fonts.css");
+@import url("../reset.css");
 /*반응형 화면 크기*/
 * {
   box-sizing: border-box;
@@ -523,7 +523,7 @@
   #wrap .section .sec11_container .sec11_content .sec11_text2 {
     line-height: 48px;
   }
-  #wrap .section .sec12_container .backgrond_img img {
+  #wrap .section .sec12_container .background_img img {
     left: -5%;
     top: -63%;
   }
@@ -538,11 +538,11 @@
     height: 50px;
   }
   #wrap .section .sec12_container .number {
-    right: 30px;
+    right: calc(50% - 185px + 20px);
     top: 120px;
   }
   #wrap .section .sec12_container .number a img {
-    width: 42%;
+    width: 185px;
   }
   #wrap .section .sec12_container .sec12_content {
     left: calc(50% - 158.5px);
