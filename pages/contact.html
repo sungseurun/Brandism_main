@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Brandism | contact</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/header.css">
@@ -95,11 +95,9 @@
     <script type="text/javascript">
         // <!-- textarea 바이트 수 체크하는 함수 -->
         function fn_checkByte(obj){
-            const maxByte = 200; //최대 100바이트
+            const maxByte = 2000; //최대 100바이트
             const text_val = obj.value; //입력한 문자
-            console.log(text_val)
             const text_len = text_val.length; //입력한 문자수
-            console.log(text_len)
             let totalByte=0;
             for(let i=0; i<text_len; i++){
                 const each_char = text_val.charAt(i);
@@ -150,6 +148,7 @@
                     this.number_back.value = '';
                     alert('문의가 완료되었습니다.');
          	    }, function(error) {
+                    alert('메일 발송이 실패하였습니다.');
          	       console.log('FAILED...', error);
          	    });
             });
