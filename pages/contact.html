@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contact-mo.css">
+    <link rel="stylesheet" href="../css/contact-pc.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="../js/contact.js" type="module"></script>
+
+    <!-- 인풋박스 포커스 바꾸는 함수 -->
+    <script type="text/javascript">
+        function init() {
+            const number = document.getElementById('number');
+            const number_front = document.getElementById('number_front');
+            const number_back = document.getElementById('number_back');
+            const email = document.getElementById('email');
+
+            checkInputAndFocusNext(number, number_front);
+            checkInputAndFocusNext(number_front, number_back);
+            checkInputAndFocusNext(number_back, email);
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+
+        function checkInputAndFocusNext(input, nextInput) {
+            let maxDigits = 4;
+            input.addEventListener('input', () => {
+                if(input.id==='number') maxDigits = 3;
+                if (input.value.length > maxDigits) {
+                input.value = input.value.slice(0, maxDigits);
+                }
+
+                if (input.value.length >= maxDigits) {
+                    nextInput.focus();
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <aside>
+        <button id="goTop" class="aside__move-top-button" >
+            <!-- <img src="../img/contact__arrow-button-top.svg"/> -->
+            <svg id="arrow-button-top" width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.96013 16.0398L5.96013 1.96015M5.96013 1.96015L0.717695 7.20259M5.96013 1.96015L11.0528 7.05281" stroke="black" stroke-width="1.97872"/>
+            </svg>                
+        </button>
+    </aside>
+    <section class="contact-wrap">
+        <div class="contact-wrap__info">
+            <h1>Contact</h1>
+            <p>하단에 정보를 남겨주시면 <br class='mobile-spacing'/> 확인 후 빠르게 답변 드릴게요.</p>
+        </div>
+        <form id="contactForm" class="contact-wrap__form">
+            <div class="contact-wrap__name-number-wrap">
+                <div class="contact-wrap__name-input-wrap">
+                    <label for="name">name.</label>
+                    <input id="name" type="text" maxlength="50" placeholder="성함을 입력해주세요">
+                </div>
+                <div class="contact-wrap__number-input-wrap">
+                    <label for="number">number.</label>
+                    <div class="contact-wrap__number-wrap">
+                        <input id="number" type="number"><span></span>
+                        <input id="number_front" type="number"><span></span>
+                        <input id="number_back" type="number">
+                    </div>
+                </div>
+            </div>
+            <label for="email">e-mail.</label>
+            <input type="email" id="email" placeholder="메일을 입력해주세요" maxlength="50">
+            <label for="substance">substance.</label>
+            <textarea id="substance" onkeyup="fn_checkByte(this)" placeholder="문의내용을 입력하세요"></textarea>               
+            <div class="contact-wrap__submit-agreement-wrap">
+                <div class="contact-wrap__personal-information-agreement-wrap">
+                    <input type="checkbox" id="contactCheckBox" class="contact-wrap__personal-information-agreement"/>
+                    <label for="contactCheckBox" class="contact-wrap__custom-check-box"></label>
+                    <label for="contactCheckBox" class="contact-wrap__check-box-value">개인정보 수집에 동의합니다.</label>
+                </div>
+                <div class="contact-wrap__submit-button-wrap">
+                    <button class="contact-wrap__submit-button" type="submit">문의하기</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div id="footer"></div>
+    <script src="../components/app.js" type="module"></script>
+
+    <script type="text/javascript">
+        // <!-- textarea 바이트 수 체크하는 함수 -->
+        function fn_checkByte(obj){
+            const maxByte = 200; //최대 100바이트
+            const text_val = obj.value; //입력한 문자
+            console.log(text_val)
+            const text_len = text_val.length; //입력한 문자수
+            console.log(text_len)
+            let totalByte=0;
+            for(let i=0; i<text_len; i++){
+                const each_char = text_val.charAt(i);
+                const uni_char = escape(each_char); //유니코드 형식으로 변환
+                if(uni_char.length>4){
+                    // 한글 : 2Byte
+                    totalByte += 2;
+                    if(totalByte>maxByte) {
+                        obj.value = obj.value.substr(0,i)
+                        return alert('최대 1000자까지만 입력가능합니다.');
+                    } 
+                }else{
+                    totalByte += 1;
+                    if(totalByte>maxByte) {
+                        obj.value = obj.value.substr(0,i)
+                        console.log(totalByte)
+                        return alert('최대 1000자까지만 입력가능합니다.');
+                    }
+                }
+            }
+        }
+
+        //메일 발송
+        window.onload = function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                if(this.name.value === '') return alert('이름을 입력해 주세요.');
+                if(this.number.value.length !== 3 || this.number_front.value.length !== 4 || this.number_back.value.length !== 4) return alert('전화번호를 확인해 주세요.');
+                if(this.email.value === '') return alert('이메일을 입력해 주세요.')
+                if(this.substance.value === '') return alert('문의내용을 입력해 주세요.')
+                if(this.contactCheckBox.checked === false) return alert('개인정보 수집이용 동의하셔야 합니다.')
+                const number = [this.number.value, this.number_front.value, this.number_back.value].join('-');
+                const template = {
+                    number : number,
+                    name: this.name.value,
+                    email:this.email.value,
+                    substance:this.substance.value,
+                }
+                emailjs.send('service_qo0q3cq', 'template_tjjtc1b', template)
+                //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+         	    .then(function(response) {
+         	       console.log('SUCCESS!', response.status, response.text);
+                    this.name.value = '';
+                    this.email.value = '';
+                    this.substance.value = '';
+                    this.number.value ='' ;
+                    this.number_front.value = '' ;
+                    this.number_back.value = '';
+                    alert('문의가 완료되었습니다.');
+         	    }, function(error) {
+         	       console.log('FAILED...', error);
+         	    });
+            });
+
+            //메뉴 토글
+            function showMenu() {
+                const open_nav = document.getElementById("navOpen");
+                const close_nav = document.getElementById("navClose");
+                const sidebar = document.querySelector("#sidebar");
+                open_nav.addEventListener("click", () => {
+                    // if(document.getElementById('topMenu').classList.contains('pc-only')) 
+                        document.getElementById('topMenu').classList.remove('pc-only'); 
+                });
+                close_nav.addEventListener("click", () => {
+                        document.getElementById('topMenu').classList.add('pc-only'); 
+                });
+            };
+            showMenu();
+        }
+
+        //개인정보수집동의체크박스
+        function getCheckboxValue(event)  {
+            let result = '';
+            if(event.target.checked)  {
+                result = event.target.value;
+            }else {
+                result = '';
+            }
+            document.getElementById('result').innerText = result;
+        }
+
+        //위로가기
+        const scroll = () => {
+            const scrollBtn = document.getElementById('goTop')
+            const scrollBtnDisplay = () => {
+                window.addEventListener('scroll', () => {
+                    if (document.querySelector('html').scrollTop > 100) {
+                    document.getElementById('goTop').style.display = "block";
+                    } else {
+                    document.getElementById('goTop').style.display = "none";
+                    }
+                });
+            };
+            const scrollWindow = function () { 
+                if (window.scrollY != 0) {
+                    setTimeout(function () {
+                    window.scrollTo(0, window.scrollY - 50);
+                    scrollWindow();
+                    }, 10);
+                }
+            };
+            scrollBtnDisplay();
+            scrollBtn.addEventListener("click", scrollWindow);
+        }
+        
+        scroll();
+    </script>
+</body>
+</html>
