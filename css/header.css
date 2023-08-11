@@ -3,11 +3,8 @@
 @import url("reset.css"); */
 
 /* 헤더 */
-.pc-only {
-    display:none;
-    opacity: 0;
-}
-.mobile-only {
+
+.header__mobile-only {
     display:block;
 }  
 
@@ -50,6 +47,11 @@ header > nav > button {
     opacity: 1;   
     transition: opacity 3s;
 }
+
+.header__pc-only {
+    display:none;
+}
+
 .header__top-menu li {
     margin-bottom: 38px;
 }
@@ -79,11 +81,8 @@ header > nav > button {
     }
 }
 @media (min-width:1200px) {
-    .mobile-only {
+    .header__mobile-only {
         display: none;
-    }
-    .pc-only {
-        display:block;
     }
     .pc-flex {
         display: flex;
@@ -110,6 +109,11 @@ header > nav > button {
         background-color: transparent;
         opacity: 1;
     }
+
+    .header__pc-only {
+        display:block;
+    }
+    
     .header__top-menu li {
         margin-bottom:25px;
     }
