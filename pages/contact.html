@@ -90,7 +90,7 @@
     <script type="text/javascript">
         // <!-- textarea 바이트 수 체크하는 함수 -->
         function fn_checkByte(obj){
-            const maxByte = 2000; //최대 100바이트
+            const maxByte = 100; //최대 100바이트
             const text_val = obj.value; //입력한 문자
             const text_len = text_val.length; //입력한 문자수
             let totalByte=0;
@@ -116,7 +116,7 @@
         }
 
         //메일 발송
-        window.onload = function() {
+        window.addEventListener ('load', function() {
             document.getElementById('contactForm').addEventListener('submit', function(event) {
                 event.preventDefault();
                 if(this.name.value === '') return alert('이름을 입력해 주세요.');
@@ -147,18 +147,18 @@
          	       console.log('FAILED...', error);
          	    });
             });
-        }
+        });
 
-        //개인정보수집동의체크박스
-        function getCheckboxValue(event)  {
-            let result = '';
-            if(event.target.checked)  {
-                result = event.target.value;
-            }else {
-                result = '';
-            }
-            document.getElementById('result').innerText = result;
-        }
+        // //개인정보수집동의체크박스
+        // function getCheckboxValue(event)  {
+        //     let result = '';
+        //     if(event.target.checked)  {
+        //         result = event.target.value;
+        //     }else {
+        //         result = '';
+        //     }
+        //     document.getElementById('result').innerText = result;
+        // }
 
     </script>
         <script type="text/javascript" src="../js/global.js" ></script>
