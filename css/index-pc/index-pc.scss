@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url('/css/fonts.css');
-@import url('/css/reset.css');
+@import url('../fonts.css');
+@import url('../reset.css');
 
 * {
   box-sizing: border-box;
@@ -21,7 +21,6 @@
   .header {
     z-index: 4;    // z-index를 설정해줘야 다른 섹션에 다 보임
     position: relative;
-    // max-width: 1920px;
     max-width: 1903px;
     width: 100%;
     margin: 0 auto;
@@ -40,8 +39,6 @@
             position: absolute;
             top: 0;
             left: 0;
-            // width: 281px;
-            // height: 65.12px;
           }
         }
       }
@@ -52,12 +49,14 @@
           right: 112px;
           line-height: 40px;
           li {
-            font-size: 1.5625rem;   //25px
-            font-weight: 700;
-            color: #000;
-            font-family: 'Outfit';
-            font-style: normal;
-            text-align: right;
+            a{
+              font-size: 1.5625rem;   //25px
+              font-weight: 700;
+              color: var(--black);
+              font-family: 'Outfit';
+              font-style: normal;
+              text-align: right;
+            }
           }
         } 
       }
@@ -85,7 +84,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #000;
+            background-color: var(--black);
             transition: all .3s;
             font-weight: 700;
             &:nth-child(1){
@@ -160,7 +159,7 @@
             height: 310px;  // img사이즈 높이가 345px
             display: flex;
             text-align: center;
-            color: #000;
+            color: var(--black);
             animation: slide1 2s ease-in-out forwards;  // 슬라이드 애니메이션1
             .we {
               position: absolute;
@@ -195,7 +194,7 @@
               position: absolute;
               right: 0;   
               bottom: 0;
-              color: #000;
+              color: var(--black);
               font-style: italic;
               font-family: 'Cormorant Garamond';
               font-size: 9rem;  //150px;
@@ -246,7 +245,7 @@
               position: absolute;
               right: 0;
               top: 0;
-              color: #000;
+              color: var(--black);
               text-decoration: underline;
               text-decoration-thickness: 0;   // 선 두께
               text-underline-position: under;
@@ -285,7 +284,7 @@
           left: calc(50% - 1219px/2 + 135px);
           width: 950px;
           height: 150px;
-          color: #000;
+          color: var(--black);
           display: flex;
           text-align: center;
           justify-content: center;
@@ -342,7 +341,7 @@
             font-weight: 300;
             font-size: 10.625rem;  //170px
             line-height: 242px;
-            color: #000;
+            color: var(--black);
             letter-spacing: -0.5rem;
           }
           .sec3_gap {
@@ -407,7 +406,7 @@
             font-weight: 300;
             font-size: 10.625rem;
             // line-height: 242px;
-            color: #000;
+            color: var(--black);
             letter-spacing: -0.5rem;
           }
         }
@@ -431,7 +430,7 @@
             font-weight: 300;
             font-size: 10.625rem;  //170px
             line-height: 242px;
-            color: #000;
+            color: var(--black);
             letter-spacing: -0.5rem;
           }
           .sec4_gap {
@@ -463,7 +462,7 @@
                 font-weight: 500;
                 font-size: 2.8125rem;  //45px
                 line-height: 62px;
-                color: #000;
+                color: var(--black);
               }
             }
             .sec4_text2 {
@@ -477,7 +476,7 @@
                 font-weight: 300;
                 font-size: 1.125rem;  //18px
                 line-height: 30px;
-                color: #000;
+                color: var(--black);
               }
               .sec4_brace2 {
                 position: absolute;
@@ -495,7 +494,7 @@
             font-weight: 300;
             font-size: 10.625rem;   //170px
             // line-height: 242px;
-            color: #000;
+            color: var(--black);
             letter-spacing: -0.5rem;
           }
         }
@@ -582,7 +581,7 @@
                 right: 0;
                 font-size: 11.875rem;  //190px
                 line-height: 260px;
-                color: #000;
+                color: var(--black);
                 letter-spacing: -0.3rem;
               }
               h4 {
@@ -602,7 +601,7 @@
               bottom: 0;
               font-family: 'SUIT';
               font-style: normal;
-              color: #000;
+              color: var(--black);
               h5 {
                 padding-bottom: 30px;
                 font-weight: 500;
@@ -637,7 +636,7 @@
             font-weight: 300;
             font-size: 11.25rem;  //180px
             // line-height: 242px;
-            color: #000;
+            color: var(--black);
             justify-items: center;
             align-items: center;
             letter-spacing: -0.3rem;
@@ -682,7 +681,7 @@
             font-style: italic;
             font-weight: 300;
             font-size: 11.25rem;  //180px
-            color: #000;
+            color: var(--black);
             letter-spacing: -0.3rem;
           }
         }
@@ -706,7 +705,7 @@
             font-weight: 300;
             font-size: 11.25rem;  //180px
             letter-spacing: -0.3rem;
-            color: #000;
+            color: var(--black);
           }
           .sec7_gap {
             position: absolute;
@@ -734,7 +733,7 @@
               font-size: 2rem;    //32px;   
               line-height: 130%;
               text-align: center;
-              color: #000
+              color: var(--black)
             }
             .mo_sec7_text {
               display: none;
@@ -755,7 +754,7 @@
             font-size: 8.125rem;  //130px
             line-height: 182px;
             letter-spacing: -0.3rem;
-            color: #000;
+            color: var(--black);
           }
           .object {
             opacity: 0;
@@ -793,7 +792,7 @@
           left: calc(50% - 630px/2); 
           width: 630px;
           height: 246px;
-          color: #000;
+          color: var(--black);
           display: flex;
           text-align: center;
           justify-content: center;
@@ -854,7 +853,7 @@
           left: calc(50% - 630px/2); 
           width: 630px;
           height: 210px;
-          color: #000;
+          color: var(--black);
           display: flex;
           text-align: center;
           justify-content: center;
@@ -893,7 +892,7 @@
           left: calc(50% - 710px/2);
           width: 730px;
           height: 350px; 
-          color: #000;
+          color: var(--black);
           h3 {
             position: absolute;
             left: 0;
@@ -945,7 +944,7 @@
           height: 300px;
           .sec11_text {
             position: relative;
-            color: #000;
+            color: var(--black);
             font-family: 'SUIT';
             font-style: normal;
             font-weight: 600;
@@ -1001,9 +1000,9 @@
 
     // 푸터
     .section12 {
-      background-color: #000;
+      background-color: var(--black);
       .sec12_container {
-        .backgrond_img {
+        .background_img {
           img {
             position: absolute;
             top: -400px;
@@ -1050,7 +1049,7 @@
           // width: 800px;
           // height: 610px;
           .middle {
-            color: #fff;
+            color: white;
             font-family: 'Outfit';
             font-style: normal;
             .menu {
@@ -1063,7 +1062,7 @@
             }
           }
           .bottom {
-            color: #fff;
+            color: white;
             font-family: 'Outfit';
             font-style: normal;
             padding-top: 50px;
