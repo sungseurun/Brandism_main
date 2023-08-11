@@ -30,16 +30,21 @@
         <a href="#" class="logo_btn"><img id="header_logo" class="desktop-img logoup" src="./img/homebutton_logo.png" alt=""></a>
       </div>
       <nav>
-        <ul class="header_menu" id="header_menu">
+        <ul class="header__pc-only header_menu" id="topMenu">
+          <li class="">
+            <button id="navClose">
+                <img src="./img/header__nav-close-button.svg" alt="닫기" />
+            </button>
+          </li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="./pages/portfolio.html">Portfolio</a></li>
           <li><a href="#">Our</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
         </ul>
       </nav>
       <!-- 모바일 메뉴바 버튼 -->
-      <div class="mobile_menu_btn">
-        <a href="./menu.html" class="mobile_menu_bar" id="mobile_menu_bar">
+      <div class="mobile_menu_btn mobile_menu_bar">
+        <a  class="mobile_menu_bar" id="mobile_menu_bar">
           <i></i>
           <i></i> 
           <i></i>
@@ -278,7 +283,8 @@
 <script src="./js/index-mo.js"></script>
 <script src="./js/index-pc.js"></script>
 
-<!-- 헤더푸터 -->
+<!-- 헤더푸터 / navigation -->
 <script src="./components/app.js" type="module"></script>
+<script type="text/javascript" src="../js/global.js" ></script>
 </body>
 </html>
