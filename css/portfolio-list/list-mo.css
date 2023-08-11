@@ -7,7 +7,7 @@
     width: 100%;
     position: relative;
     margin: 0 auto;
-    background-color: black;
+    background-color: var(--black);
   }
   #wrap header nav ul {
     display: none;
@@ -56,7 +56,7 @@
     font-weight: 300;
     line-height: 21px;
     letter-spacing: -0.05em;
-    color: white;
+    color: var(--white);
     padding-top: 5px;
     text-align: center;
   }
@@ -72,7 +72,7 @@
     font-size: 1.25rem;
     font-weight: 100;
     display: flex;
-    color: white;
+    color: var(--white);
   }
   #wrap .section2 .sec2_container ul li {
     padding: 12px;
@@ -117,13 +117,13 @@
     padding-top: 10px;
   }
   #wrap .section3 .sec3-container .view .content h2 {
-    color: #DBB27A;
+    color: var(--primary-brown-Normal);
     font-family: SUIT;
     font-size: 1rem;
     font-weight: 700;
   }
   #wrap .section3 .sec3-container .view .content h3 {
-    color: white;
+    color: var(--white);
     font-family: SUIT;
     font-size: 1rem;
     font-weight: 400;
@@ -153,13 +153,13 @@
     padding-top: 10px;
   }
   #wrap .section4 .sec4-container .view .content h2 {
-    color: #DBB27A;
+    color: var(--primary-brown-Normal);
     font-family: SUIT;
     font-size: 1rem;
     font-weight: 700;
   }
   #wrap .section4 .sec4-container .view .content h3 {
-    color: white;
+    color: var(--white);
     font-family: SUIT;
     font-size: 1rem;
     font-weight: 400;

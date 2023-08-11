@@ -397,7 +397,7 @@
     letter-spacing: -0.05rem;
     line-height: 130%;
     text-align: center;
-    color: #000;
+    color: var(--black);
   }
   #wrap .section .sec7_container .sec7_content .contact {
     left: calc(50% - 52.5px);
