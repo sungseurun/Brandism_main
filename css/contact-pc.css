@@ -34,14 +34,6 @@
         background-repeat: no-repeat;
         pointer-events: none; 
     }
-    
-    #arrow-button-top {
-        width: 100px;
-    }
-
-    #arrow-button-top path {
-        stroke:var(--white);
-    }
 
     .contact-wrap {
         margin:0 auto;
