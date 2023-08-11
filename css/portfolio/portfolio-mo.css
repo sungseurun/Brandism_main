@@ -8,9 +8,9 @@
   margin: 0 auto;
   background-color: var(--black);
 }
-#wrap header nav ul {
+/* #wrap header nav ul {
   display: none;
-}
+} */
 #wrap .section {
   position: relative;
   width: 100%;
