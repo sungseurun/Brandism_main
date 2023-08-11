@@ -5,7 +5,9 @@ export default class Header extends Component {
     return `
         <header>
             <h1>
-                <img src="../img/header-title-logo.svg" alt="로고" />  
+                <a href="/">
+                    <img src="../img/header-title-logo.svg" alt="로고" />
+                </a>
             </h1>
             <nav>
                 <button id="navOpen" class="mobile-only">
@@ -17,10 +19,10 @@ export default class Header extends Component {
                             <img src="../img/header__nav-close-button.svg" alt="닫기" />
                         </button>
                     </li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="/our">Our</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/portfolio.html">Portfolio</a></li>
+                    <li><a href="../pages/our.html">Our</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>

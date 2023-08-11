@@ -226,7 +226,10 @@ body::before {
     margin-right: 13px;
 }
 .contact-wrap__personal-information-agreement:checked + .contact-wrap__custom-check-box {
-    background-color: green;
+    background-image: url(../img/checkbox-icon.svg);
+    background-position: center;
+    background-size: 16px;
+    background-color: var(--white);
 }
 .contact-wrap__submit-button-wrap {
     display: flex;
