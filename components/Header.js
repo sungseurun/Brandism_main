@@ -10,11 +10,11 @@ export default class Header extends Component {
                 </a>
             </h1>
             <nav>
-                <button id="navOpen" class="mobile-only">
+                <button id="navOpen" class="header__mobile-only">
                     <img src="../img/header__nav-menu-button.svg" alt="메뉴버튼" />
                 </button>
-                <ul id="topMenu" class="pc-only header__top-menu">
-                    <li class="mobile-only header__nav-close-button">
+                <ul id="topMenu" class="header__pc-only header__top-menu">
+                    <li class="header__mobile-only header__nav-close-button">
                         <button id="navClose">
                             <img src="../img/header__nav-close-button.svg" alt="닫기" />
                         </button>

@@ -33,7 +33,7 @@
         right: 0;
     }
     #arrow-button-top {
-        width: 100px;
+        /* width: 100px; */
     }
     #arrow-button-top path {
         stroke:var(--white);
