@@ -4,7 +4,7 @@
 
 /* 모바일 우선 css 작업 */
 
-@media all and (min-width: 320px) {
+// @media all and (min-width: 320px) {
 
   #wrap {
     width: 100%;
@@ -110,8 +110,8 @@
         }
       }
     }
-    .section3 {
-      .sec3-container {
+    .public-section {
+      .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -149,69 +149,33 @@
         }
       }
     }
-    .section4 {
-      // .sec4-wrap {
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: center;
-        .sec4-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          // width: 360px;
-          width: 460px;
-          .view {
-            margin: 32px 10px 0;
-            width: 160px;
-            height: 210px;
-            .gap {
-              width: 160px;
-              height: 160px;
-              background-color: #D9D9D9;
-            }
-            .content {
-              width: 160px;
-              height: 50px;
-              line-height: 21px;
-              padding-top: 10px;
-              h2 {
-                color: var(--primary-brown-Normal);
-                font-family: SUIT;
-                font-size: 1rem;  //16px
-                font-weight: 700;
-              }
-              h3 {
-                color: var(--white);
-                font-family: SUIT;
-                font-size: 1rem;  //16px
-                font-weight: 400;
-                letter-spacing: -0.05em;
-              }
-            }
+
+    // 페이지 번호 매기기
+    .page {
+      margin: 65px auto 93px;
+      width: 330px;
+      height: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: SUIT;
+        font-size: 1rem;
+        font-weight: 400;
+        width: 328px;
+        height: 48px;
+        // margin-left: 20%;
+        li {
+          padding: 0 25px;
+          a {
+            img {}
           }
         }
-        .sec4-page {
-          margin: 80px 0;
-          width: 330px;
-          height: 50px;
-          .pagination {
-            display: flex;
-            justify-content: center;
-            font-family: SUIT;
-            font-size: 1rem;
-            font-weight: 400;
-            width: 328px;
-            height: 48px;
-            // margin-left: 20%;
-            li {
-              padding: 0 25px;
-              a {
-                img {}
-              }
-            }
-          }
-        }
-      // }
+      }
     }
 
     footer {
@@ -248,4 +212,4 @@
     }
   }
 
-}
+// }

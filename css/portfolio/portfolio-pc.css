@@ -46,61 +46,34 @@
     width: 580px;
     height: 130px;
   }
-  #wrap .section .sec3-container {
+  #wrap .public-section .container {
     width: 3500px;
   }
-  #wrap .section .sec3-container .view {
+  #wrap .public-section .container .view {
     margin: 85px 18px 0;
     width: 267px;
     height: 375px;
   }
-  #wrap .section .sec3-container .view .gap {
+  #wrap .public-section .container .view .gap {
     width: 267px;
     height: 267px;
   }
-  #wrap .section .sec3-container .view .content {
+  #wrap .public-section .container .view .content {
     width: 267px;
     height: 105px;
     padding-top: 26px;
   }
-  #wrap .section .sec3-container .view .content h2 {
+  #wrap .public-section .container .view .content h2 {
     font-size: 1rem;
     line-height: 16px;
   }
-  #wrap .section .sec3-container .view .content h3 {
+  #wrap .public-section .container .view .content h3 {
     padding-top: 20px;
     font-size: 1.25rem;
     line-height: 26px;
   }
-  #wrap .section4 {
-    border-bottom: 1px solid #fff;
-    margin-bottom: 105px;
-  }
-  #wrap .section4 .sec4-container {
-    width: 3500px;
-  }
-  #wrap .section4 .sec4-container .view {
-    margin: 85px 18px 0;
-    width: 267px;
-    height: 375px;
-  }
-  #wrap .section4 .sec4-container .view .gap {
-    width: 267px;
-    height: 267px;
-  }
-  #wrap .section4 .sec4-container .view .content {
-    width: 267px;
-    height: 105px;
-    padding-top: 26px;
-  }
-  #wrap .section4 .sec4-container .view .content h2 {
-    font-size: 1rem;
-    line-height: 16px;
-  }
-  #wrap .section4 .sec4-container .view .content h3 {
-    padding-top: 20px;
-    font-size: 1.25rem;
-    line-height: 26px;
+  #wrap .page {
+    margin: 83px auto 200px;
   }
   #wrap aside .aside__move-top-button {
     width: 74px;
@@ -116,9 +89,13 @@
     stroke: var(--white);
   }
   #wrap footer {
+    border-top: 1px solid var(--white);
     margin: 0 auto;
+  }
+  #wrap footer .footer__title {
+    padding-top: 105px;
   }
   #wrap footer .footer__copyright {
     font-size: 1.25rem;
   }
-}/*# sourceMappingURL=list-pc.css.map */
+}/*# sourceMappingURL=portfolio-pc.css.map */
