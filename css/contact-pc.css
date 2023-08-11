@@ -34,14 +34,7 @@
         background-repeat: no-repeat;
         pointer-events: none; 
     }
-    .aside__move-top-button {
-        width:74px;
-        height:74px;
-        background-color:var(--black) ;
-        border-radius:0;
-        right: 0;
-    }
-
+    
     #arrow-button-top {
         width: 100px;
     }

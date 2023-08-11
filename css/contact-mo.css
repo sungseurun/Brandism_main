@@ -27,22 +27,6 @@ body::before {
     pointer-events: none; 
 }
 
-.aside__move-top-button {
-    width:48px;
-    height:48px;
-    background-color:var(--white) ;
-    border: none;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 30px;
-    right:4.8%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-
 .contact-wrap__info {
     display: flex;
     flex-direction: column;

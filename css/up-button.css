@@ -1,0 +1,36 @@
+.aside__pc-only {
+    display:none;
+}
+
+.aside__move-top-button {
+    width:48px;
+    height:48px;
+    background-color:var(--white) ;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right:4.8%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+@media (min-width:1200px) {
+    .aside__only_mobile {
+        display: none;
+    }
+    .aside__only_pc {
+        display:block;
+    }
+	.aside__move-top-button {
+        width:74px;
+        height:74px;
+        background-color:var(--black) ;
+        border-radius:0;
+        right: 0;
+    }
+}
+
