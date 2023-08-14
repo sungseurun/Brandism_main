@@ -9,6 +9,8 @@
   <!-- css 연동 -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/up-button.css">
   <link rel="stylesheet" href="./css/index-pc/index-pc.css">
   <link rel="stylesheet" href="./css/index-mo/index-mo.css"> 
 </head>
@@ -24,34 +26,30 @@
 
 <div id="wrap">
   
-  <header id="header" class="header">
-    <div class="header_container">
-      <div class="logo" >
-        <a href="#" class="logo_btn"><img id="header_logo" class="desktop-img logoup" src="./img/homebutton_logo.png" alt=""></a>
-      </div>
-      <nav>
-        <ul class="header__pc-only header_menu" id="topMenu">
-          <li class="">
-            <button id="navClose">
-                <img src="./img/header__nav-close-button.svg" alt="닫기" />
-            </button>
+  <div id="header"></div>
+  
+  <header>
+    <h1>
+      <a href="./index.html">
+          <img src="./img/homebutton_logo.png" alt="로고" />
+      </a>
+    </h1>
+    <nav>
+      <button id="navOpen" class="header__mobile-only">
+          <img src="./img/header__nav-menu-btn.svg" alt="메뉴버튼" />
+      </button>
+      <ul id="topMenu" class="header__pc-only header__top-menu">
+          <li class="header__mobile-only header__nav-close-button">
+              <button id="navClose">
+                  <img src="./img/header__nav-close-button.svg" alt="닫기" />
+              </button>
           </li>
-          <li><a href="#">About</a></li>
+          <li><a href="./pages/about.html">About</a></li>
           <li><a href="./pages/portfolio.html">Portfolio</a></li>
-          <li><a href="#">Our</a></li>
+          <li><a href="./pages/our.html">Our</a></li>
           <li><a href="./pages/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- 모바일 메뉴바 버튼 -->
-      <div class="mobile_menu_btn mobile_menu_bar">
-        <a  class="mobile_menu_bar" id="mobile_menu_bar">
-          <i></i>
-          <i></i> 
-          <i></i>
-        </a>
-      </div>
-      <!-- 모바일메뉴 버튼 클릭했을 때 나오는 페이지는 새로 만듬 menu.html -->
-    </div>
+      </ul>
+    </nav>
   </header>
 
   <!-- <main id="main">  -->
