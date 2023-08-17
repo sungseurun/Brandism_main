@@ -8,9 +8,6 @@
   margin: 0 auto;
   background-color: var(--black);
 }
-#wrap header nav ul {
-  display: none;
-}
 #wrap .section {
   position: relative;
   width: 100%;
@@ -182,4 +179,4 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-}/*# sourceMappingURL=portfolio-mo.css.map */
+}

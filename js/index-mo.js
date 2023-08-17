@@ -2,10 +2,14 @@
 
 
 /* [html 최초 로드 및 이벤트 상시 대기 실시] */
-window.onload = function() {
+// window.onload = function() {
   // [터치 등록 이벤트 호출]
+  // main();
+// };
+
+window.addEventListener("load", function(){
   main();
-};
+});
 
 // 모바일 X,Y 좌표값 체크
 let xStart;
@@ -23,7 +27,7 @@ function main(){
   // [모바일 : 터치 시작 내부 함수 - (주의) 클릭 이벤트와 겹칠 수 있음]
   function handleStart(evt) {
     // body 스크롤 막음 [바디영역에서 스크롤있으면 터치 이벤트 안먹힙니다]
-    //BodyScrollDisAble();
+    BodyScrollDisAble();
 
     let startX = evt.changedTouches[0].clientX;
     let startY = evt.changedTouches[0].clientY;
@@ -34,7 +38,7 @@ function main(){
   // [모바일 : 터치 이동 내부 함수]
   function handleMove(evt) {
     // body 스크롤 막음 [바디영역에서 스크롤있으면 터치 이벤트 안먹힙니다]
-    //BodyScrollDisAble();
+    BodyScrollDisAble();
 
     // var moveX = evt.changedTouches[0].clientX;
     // var moveY = evt.changedTouches[0].clientY;

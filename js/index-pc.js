@@ -176,9 +176,6 @@ function section1Event(){
   if (window.matchMedia("(max-width: 744px)").matches) {
     if(wheelFlag=='down'){  
       beforeScale = 'scale(1)' + 'translate(0)',
-      // onceScale  = 'scale(0.9)' + 'translate(0, -30px)',
-      // twiceScale = 'scale(0.8)' + 'translate(0, -120px)',
-      // threeScale = 'scale(0.7)' + 'translate(0, -200px)',
       afterScale = 'scale(0.5)' + 'translate(0px, -350px)'
     } else {  
       beforeScale = 'scale(0.5)' + 'translate(0px, -350px)',
@@ -728,11 +725,11 @@ function section10Event(){
 
   // 오브젝트 이미지 서서히 나타나기 이벤트
     document.getElementById('sec10_img1').animate(
-    [  // keyframes
+    [
       {opacity: 0},
       {opacity: 1}
     ],
-    {  // options
+    {
       duration: 1500,       
       easing: 'ease-in-out',  
       fill: 'forwards' 
@@ -890,6 +887,7 @@ function section12Event(){
   document.getElementById('sec12_content').animate(keyframes2, options2);
 
 }
+
 
 /* Top버튼 누르면 처음화면(section1)으로 가게하는 이벤트 */
 function moveTop(){

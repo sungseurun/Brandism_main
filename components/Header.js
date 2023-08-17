@@ -5,7 +5,7 @@ export default class Header extends Component {
     return `
         <header>
             <h1>
-                <a href="/">
+                <a href="../index.html">
                     <img src="../img/header-title-logo.svg" alt="로고" />
                 </a>
             </h1>

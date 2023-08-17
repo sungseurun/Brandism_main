@@ -4,9 +4,6 @@
 @import url("../header.css");
 /* portfolio-list PC 버전 */
 @media all and (min-width: 1200px) {
-  #wrap .header__top-menu {
-    display: block;
-  }
   #wrap .section .sec1_container .mo__background-img {
     display: none;
   }
@@ -98,4 +95,4 @@
   #wrap footer .footer__copyright {
     font-size: 1.25rem;
   }
-}/*# sourceMappingURL=portfolio-pc.css.map */
+}
