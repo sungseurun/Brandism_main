@@ -11,7 +11,6 @@ let sectionNum = 1;        // 섹션 넘버
 let wheelNumber = 0;       // 섹션 휠넘버 
 let wheelFlag="";          // 휠 업·다운
 let beforeWheelNumber = 0; // 이전 휠 번호
-// let onClick = "";
 
 let timeout;  // 휠 이벤트 시간제한 두기
 
@@ -41,7 +40,7 @@ window.addEventListener('wheel', function (e) {
       console.log("beforeWheelNumber:" + beforeWheelNumber);
       console.log("wheelNumber:" + wheelNumber);
   
-    },100);  // 0.1초 후
+    },100);  // 시간조정 가능
   };
 });
 
@@ -101,6 +100,7 @@ function sectionEvent(){
   if (wheelNumber >= 0 && wheelNumber < 1){   // wheelNumber 0일 때 1번 섹션만 노출 (메인슬라이드)
     allSectionNone();
     document.getElementById( 'section1' ).style.visibility = 'visible';
+    document.querySelector( 'header' ).style.visibility = 'visible'; // 섹션1에서 다시 헤더 보이게
   } else if (wheelNumber >= 1 && wheelNumber < 2){   // wheelNumber 1일 때 1,2번 섹션 동시노출
     allSectionNone();
     document.getElementById( 'section1' ).style.visibility = 'visible';
@@ -141,12 +141,12 @@ function sectionEvent(){
   else if (wheelNumber >= 10 && wheelNumber < 11){ 
     allSectionNone();
     document.getElementById( 'section11' ).style.visibility = 'visible';
-    document.getElementById( 'header' ).style.visibility = 'visible'; // 헤더 다시 보이게 
+    document.querySelector( 'header' ).style.visibility = 'visible'; // 헤더 다시 보이게 
   }
   else if (wheelNumber >= 11 && wheelNumber < 12){ 
     allSectionNone();
     document.getElementById( 'section12' ).style.visibility = 'visible';
-    document.getElementById( 'header' ).style.visibility = 'hidden'; // 섹션12 헤더 안보이게
+    document.querySelector( 'header' ).style.visibility = 'hidden'; // 섹션12 헤더 안보이게
   }
 
 };
